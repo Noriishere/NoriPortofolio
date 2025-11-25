@@ -19,6 +19,7 @@ export function navbar() {
     const contact = document.createElement("a")
     contact.classList.add('navbar-link')
     contact.textContent = "Contact"
+    contact.href = "mailto:noriyamashin@gmail.com"
     
     const support = document.createElement("a")
     support.classList.add('navbar-link')
