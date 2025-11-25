@@ -1,0 +1,427 @@
+*,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+}
+
+:root {
+    --main-bg: black;
+    --secondary-bg: #DAA520;
+    --font: Poppins;
+}
+
+body {
+    background-color: var(--secondary-bg);
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--main-bg);
+    color: var(--secondary-bg);
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 0 20px;
+    display: flex;
+    /* Supaya item atau isinya ke tengah */
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    display: inline-block;
+}
+
+.navbar-link {
+    margin: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--secondary-bg);
+    display: inline-block;
+    transition: .2s ease;
+}
+
+.navbar-link:hover {
+    transform: scale(1.5);
+    transition: .2s ease;
+}
+
+.wrapper {
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    /* Karena ini jadi wrapper buat content maka pake flex biar ke samping */
+    display: flex;
+    margin-top: 1rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.wrapper-inverted{
+    background-color: var(--main-bg);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+
+.description-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 0.3rem;
+    justify-content: stretch;
+    align-items: stretch;
+    box-sizing: border-box;
+    -webkit-animation: slideDown .5s ease-in forwards;
+    animation: slideDown .5s ease-in forwards;
+}
+.description {
+    flex: 1 1 50rem;
+    /* lebar maksimal 800px */
+    width: 100%;
+    /* seimbang */
+    padding: 2rem;
+    min-height: 28vh;
+    background-color: var(--main-bg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.side-description {
+    flex: 1 1 0;
+    border: 2px solid black;
+    padding: 2rem;
+    background-color: var(--main-bg);
+    min-width: 20rem;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.description-title {
+    color: var(--secondary-bg);
+    display: inline-block;
+    -webkit-animation: wave .5s ease-in-out forwards;
+    animation: wave .5s ease-in-out forwards;
+}
+
+.description-paragraph {
+    color: var(--secondary-bg);
+    display: inline-block;
+    -webkit-animation: wave .5s ease-in-out forwards;
+    animation: wave .5s ease-in-out forwards;
+}
+
+
+.sideP {
+    color: var(--secondary-bg);
+    white-space: normal;
+    word-wrap: break-word;
+    display: inline-block;
+    -webkit-animation: wave .5s ease-in-out forwards;
+    animation: wave .5s ease-in-out forwards;
+}
+
+.card {
+    height: 15vh;
+    width: 14rem;
+    border: 2px solid black;
+    padding: 5rem;
+    display: inline-block;
+    background-color: var(--main-bg);
+    -webkit-transition: .5s ease-in;
+    -moz-transition: .5s ease-in;
+    -ms-transition: .5s ease-in;
+    -o-transition: .5s ease-in;
+    transition: .5s ease-in;
+    cursor: pointer;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    border-radius: 1rem;
+}
+
+.card-inverted {
+    background-color: var(--secondary-bg) !important;
+    color: var(--main-bg) !important;
+    border-color: var(--main-bg);
+}
+
+.card-inverted .content {
+    color: var(--main-bg) !important;
+}
+
+.card-inverted .project-link {
+    color: var(--main-bg) !important;
+}
+
+
+.card.fade-section.show:hover {
+    transform: translateY(0) scale(1.1);
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    border-radius: 2rem;
+}
+
+.project-link {
+    padding: 2rem;
+    text-decoration: none;
+}
+
+.project-link:visited {
+    color: red
+}
+
+.content {
+    text-align: center;
+    color: var(--secondary-bg);
+}
+
+.text-myProject {
+    margin: 1rem;
+    margin-left: 2.5rem;
+}
+
+.text-myCertificate{
+    margin-top: 6rem;
+}
+
+.banner-wrapper {
+    position: relative;
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+}
+
+.banner-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+    -webkit-transition: .2s ease-in;
+    -moz-transition: .2s ease-in;
+    -ms-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
+    transition: .2s ease-in;
+    -webkit-animation: slideDown .4s ease-out forwards;
+    animation: slideDown .4s ease-out forwards;
+}
+
+.banner-name {
+    position: absolute;
+    left: 30px;
+    /* ⬅️ teks di kiri */
+    top: 90%;
+    transform: translateY(-50%);
+    color: var(--secondary-bg);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.fade-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    pointer-events: none;
+}
+
+.fade-section.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+@media (max-width: 1024px) {
+    .banner-wrapper {
+        height: 40vh;
+    }
+
+    .wrapper {
+        -webkit-transition: .5s ease-in;
+        -moz-transition: .5s ease-in;
+        -ms-transition: .5s ease-in;
+        -o-transition: .5s ease-in;
+        transition: .5s ease-in;
+    }
+
+    .banner-name {
+        font-size: 2rem;
+        left: 20px;
+        top: 85%;
+    }
+
+    .side-description {
+        min-width: 15rem;
+        -webkit-transition: .5s ease;
+        -moz-transition: .5s ease;
+        -ms-transition: .5s ease;
+        -o-transition: .5s ease;
+        transition: .5s ease;
+    }
+
+    .description-wrapper {
+        max-height: 30rem;
+        font-size: large;
+        -webkit-transition: .5s ease-in;
+        -moz-transition: .5s ease-in;
+        -ms-transition: .5s ease-in;
+        -o-transition: .5s ease-in;
+        transition: .5s ease-in;
+    }
+
+    .card {
+        width: 8rem;
+        border: 2px solid black;
+        padding: 4rem;
+        -webkit-transition: .5s ease-in;
+        -moz-transition: .5s ease-in;
+        -ms-transition: .5s ease-in;
+        -o-transition: .5s ease-in;
+        transition: .5s ease-in;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .banner-wrapper {
+        height: 35vh;
+    }
+
+    .banner-name {
+        font-size: 1.6rem;
+        left: 15px;
+        top: 82%;
+    }
+
+    .side-description {
+        min-width: 10rem;
+        -webkit-transition: .5s ease;
+        -moz-transition: .5s ease;
+        -ms-transition: .5s ease;
+        -o-transition: .5s ease;
+        transition: .5s ease;
+    }
+
+    .description-wrapper {
+        max-height: 29rem;
+        font-size: small;
+        -webkit-transition: .5s ease-in;
+        -moz-transition: .5s ease-in;
+        -ms-transition: .5s ease-in;
+        -o-transition: .5s ease-in;
+        transition: .5s ease-in;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-wrapper {
+        height: 30vh;
+    }
+
+    .banner-name {
+        font-size: 1.3rem;
+        left: 10px;
+        top: 80%;
+    }
+
+    .side-description {
+        min-width: 5rem;
+        -webkit-transition: .5s ease;
+        -moz-transition: .5s ease;
+        -ms-transition: .5s ease;
+        -o-transition: .5s ease;
+        transition: .5s ease;
+    }
+
+    .description-wrapper {
+        max-height: 30rem;
+        font-size: x-small;
+        -webkit-transition: .5s ease-in;
+        -moz-transition: .5s ease-in;
+        -ms-transition: .5s ease-in;
+        -o-transition: .5s ease-in;
+        transition: .5s ease-in;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0.5;
+        -webkit-transform: translateY(20px);
+        -moz-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        -o-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        -webkit-transform: translateY(-20px);
+        -moz-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadein {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(-20px);
+        -moz-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+}
