@@ -12,9 +12,7 @@ export function navbar() {
     const home = document.createElement("a")
     home.classList.add('navbar-link')
     home.textContent = "Home"
-    home.addEventListener("click", ()=>{
-        location.href = './';
-    })
+    home.href = "/index.html"
     
     const contact = document.createElement("a")
     contact.classList.add('navbar-link')
