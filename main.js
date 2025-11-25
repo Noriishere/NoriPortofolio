@@ -8,7 +8,7 @@ import { wrapper } from './component/wrapper.js'
 import { banner } from './component/banner.js'
 import { main } from './component/main-content.js'
 import { aboutme } from './aboutme.js'
-import { myproject } from './component/MyProject.js'
+import { myproject } from './component/titleProject.js'
 import { certificate } from './data.js'
 
 body.appendChild(navbar())
