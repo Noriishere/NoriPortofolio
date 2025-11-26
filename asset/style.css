@@ -43,7 +43,6 @@ body {
 }
 
 .navbar-link {
-    font-size: .5rem;
     margin: 0.5rem;
     cursor: pointer;
     text-decoration: none;
@@ -377,6 +376,10 @@ body {
         -ms-border-radius: 1rem;
         -o-border-radius: 1rem;
         border-radius: 1rem;
+    }
+
+    .navbar-link{
+        font-size: .5rem;
     }
 
     .content {
