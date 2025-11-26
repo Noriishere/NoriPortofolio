@@ -68,7 +68,7 @@ body {
     flex-wrap: wrap;
 }
 
-.wrapper-inverted{
+.wrapper-inverted {
     background-color: var(--main-bg);
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -86,6 +86,7 @@ body {
     -webkit-animation: slideDown .5s ease-in forwards;
     animation: slideDown .5s ease-in forwards;
 }
+
 .description {
     flex: 1 1 50rem;
     /* lebar maksimal 800px */
@@ -201,7 +202,7 @@ body {
     margin-left: 2.5rem;
 }
 
-.text-myCertificate{
+.text-myCertificate {
     margin-top: 6rem;
 }
 
@@ -294,7 +295,7 @@ body {
     }
 
     .card {
-        width: 8rem;
+        width: 15rem;
         border: 2px solid black;
         padding: 4rem;
         -webkit-transition: .5s ease-in;
@@ -306,7 +307,25 @@ body {
 }
 
 @media (max-width: 768px) {
+    .content {
+        font-size: 1rem;
+        text-align: center;
+        color: var(--secondary-bg);
+    }
 
+    .card-inverted {
+        background-color: var(--secondary-bg) !important;
+        color: var(--main-bg) !important;
+        border-color: var(--main-bg);
+    }
+
+    .card-inverted .content {
+        color: var(--main-bg);
+    }
+
+    .card-inverted .project-link {
+        color: var(--main-bg) !important;
+    }
     .banner-wrapper {
         height: 35vh;
     }
@@ -338,6 +357,46 @@ body {
 }
 
 @media (max-width: 480px) {
+    .card {
+        height: 15vh;
+        width: 14rem;
+        border: 2px solid black;
+        padding: 5rem;
+        display: inline-block;
+        background-color: var(--main-bg);
+        -webkit-transition: .5s ease-in;
+        -moz-transition: .5s ease-in;
+        -ms-transition: .5s ease-in;
+        -o-transition: .5s ease-in;
+        transition: .5s ease-in;
+        cursor: pointer;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+        border-radius: 1rem;
+    }
+
+    .content {
+        font-size: 1rem;
+        text-align: center;
+        color: var(--secondary-bg);
+    }
+
+    .card-inverted {
+        background-color: var(--secondary-bg) !important;
+        color: var(--main-bg) !important;
+        border-color: var(--main-bg);
+    }
+
+    .card-inverted .content {
+        color: var(--main-bg);
+    }
+
+    .card-inverted .project-link {
+        color: var(--main-bg) !important;
+    }
+
     .banner-wrapper {
         height: 30vh;
     }
