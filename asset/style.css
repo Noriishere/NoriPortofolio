@@ -43,7 +43,7 @@ body {
 }
 
 .navbar-link {
-    margin: 1rem;
+    margin: 0.5rem;
     cursor: pointer;
     text-decoration: none;
     color: var(--secondary-bg);
@@ -140,7 +140,6 @@ body {
 }
 
 .card {
-    height: 15vh;
     width: 14rem;
     border: 2px solid black;
     padding: 5rem;
@@ -358,10 +357,12 @@ body {
 
 @media (max-width: 480px) {
     .card {
-        height: 15vh;
-        width: 9.5rem;
+        height: auto;
+        min-height: 10rem;
+        width: calc(100% - 4rem);
+        max-width: 20rem;
         border: 2px solid black;
-        padding: 5rem;
+        padding: 2rem;
         display: inline-block;
         background-color: var(--main-bg);
         -webkit-transition: .5s ease-in;
@@ -378,6 +379,7 @@ body {
     }
 
     .content {
+        margin-top: 1rem;
         font-size: .9rem;
         text-align: center;
         color: var(--secondary-bg);
