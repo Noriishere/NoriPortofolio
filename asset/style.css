@@ -359,7 +359,7 @@ body {
 @media (max-width: 480px) {
     .card {
         height: 15vh;
-        width: 14rem;
+        width: 12rem;
         border: 2px solid black;
         padding: 5rem;
         display: inline-block;
@@ -378,7 +378,7 @@ body {
     }
 
     .content {
-        font-size: 1rem;
+        font-size: .9rem;
         text-align: center;
         color: var(--secondary-bg);
     }
