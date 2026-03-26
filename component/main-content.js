@@ -1,32 +1,66 @@
 export function main(title, desc, side) {
-    const wrapper = document.createElement("div")
-    wrapper.classList.add("description-wrapper")
-    
-    const description = document.createElement("div")
-    description.classList.add("description")
-    
-    const h1 = document.createElement("h1")
-    h1.classList.add("description-title")
-    
-    const p = document.createElement("p")
-    p.classList.add("description-paragraph")
-    
-    const sideDescription = document.createElement("div")
-    sideDescription.classList.add("side-description")
 
-    const sideP = document.createElement("p")
-    sideP.classList.add("sideP")
+    const wrapper = document.createElement("div");
+    wrapper.classList.add(
+        "flex",
+        "gap-1",
+        "items-stretch",
+        "w-full",
+        "animate-slideDown",
+        "flex-wrap",
+        "lg:flex-nowrap"
+    );
 
-    h1.textContent = title
-    p.textContent = desc
-    sideP.textContent = side
+    const description = document.createElement("div");
+    description.classList.add(
+        "flex-1",
+        "p-8",
+        "bg-main",
+        "min-h-[28vh]"
+    );
 
-    description.appendChild(h1)
-    description.appendChild(p)
-    
-    sideDescription.appendChild(sideP)
+    const h1 = document.createElement("h1");
+    h1.classList.add(
+        "text-secondary",
+        "text-3xl",
+        "font-bold",
+        "mb-4",
+        "animate-wave"
+    );
 
-    wrapper.appendChild(description)
-    wrapper.appendChild(sideDescription)
-    return wrapper
+    const p = document.createElement("p");
+    p.classList.add(
+        "text-secondary",
+        "animate-wave"
+    );
+
+    const sideDescription = document.createElement("div");
+    sideDescription.classList.add(
+        "flex-1",
+        "border-2",
+        "border-black",
+        "p-8",
+        "bg-main",
+        "min-w-[20rem]"
+    );
+
+    const sideP = document.createElement("p");
+    sideP.classList.add(
+        "text-secondary",
+        "break-words",
+        "animate-wave"
+    );
+
+    h1.textContent = title;
+    p.textContent = desc;
+    sideP.textContent = side;
+
+    description.appendChild(h1);
+    description.appendChild(p);
+    sideDescription.appendChild(sideP);
+
+    wrapper.appendChild(description);
+    wrapper.appendChild(sideDescription);
+
+    return wrapper;
 }

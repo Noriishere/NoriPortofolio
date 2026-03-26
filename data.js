@@ -1,7 +1,7 @@
 export const data = [{
     title: 'MINE',
-    description: 'Monitoring & Improvement of Note-based Education (ON PROGRESS 🦺)',
-    link: null
+    description: 'My Intelligent Learning Environment',
+    link: "https://github.com/Noriishere/my-intelligent-learning-environtment.git"
 },
 {
     title: 'BagasBlognor',
@@ -9,9 +9,9 @@ export const data = [{
     link: 'https://bagasblognor-hxr9.vercel.app/'
 },
 {
-    title: 'Norion',
-    description: 'Personal Notes (ON PROGRESS 🦺)',
-    link: null
+    title: 'Company Profile Malaka',
+    description: 'Company profile for Malaka, a college student organization',
+    link: "https://malakaubpkarawang.com/"
 }]
 
 
