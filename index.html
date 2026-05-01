@@ -604,6 +604,7 @@
         </div>
     </footer>
     <script src="asset/project.js"></script>
+    
     <!-- <script>
         const container = document.getElementById("project-list");
 
@@ -646,7 +647,7 @@
         document.addEventListener("DOMContentLoaded", async () => {
             const container = document.getElementById("project-list");
 
-            const res = await fetch("https://api.github.com/users/USERNAME/repos");
+            const res = await fetch("https://api.github.com/users/noriishere/repos");
             const repos = await res.json();
 
             repos.slice(0, 6).forEach(repo => {
