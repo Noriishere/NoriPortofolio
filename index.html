@@ -364,7 +364,7 @@
                     <div class="skill-item">
                         <div class="flex justify-between mb-2">
                             <span class="text-white text-sm font-medium"><i
-                                    class="fa-brands fa-react text-gold mr-2"></i>React / Next.js</span>
+                                    class="fa-brands fa-laravel text-gold mr-2"></i>laravel</span>
                             <span class="text-gold text-sm font-bold">85%</span>
                         </div>
                         <div class="h-1 bg-white/10 w-full">
@@ -416,7 +416,7 @@
                     <div class="skill-item">
                         <div class="flex justify-between mb-2">
                             <span class="text-white text-sm font-medium"><i
-                                    class="fa-solid fa-database text-gold mr-2"></i>SQL / Supabase</span>
+                                    class="fa-solid fa-database text-gold mr-2"></i>SQL</span>
                             <span class="text-gold text-sm font-bold">65%</span>
                         </div>
                         <div class="h-1 bg-white/10 w-full">
@@ -439,7 +439,7 @@
     </section>
 
     <!-- PROJECTS -->
-    <div id="project-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <div id="projects" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
     <!-- EXPERIENCE -->
     <section id="experience" class="py-28 bg-black border-t border-forest/20">
@@ -483,7 +483,7 @@
                                 <i class="fa-regular fa-calendar text-gold/50"></i> 2022 – 2023
                             </span>
                         </div>
-                        <p class="text-white/40 text-xs leading-relaxed">Membangun komponen React yang reusable,
+                        <p class="text-white/40 text-xs leading-relaxed">Membangun komponen html yang reusable,
                             mengintegrasikan API, dan berkolaborasi langsung dengan tim produk.</p>
                     </div>
                 </div>
@@ -521,17 +521,17 @@
                     <p class="text-white/50 text-sm leading-relaxed mb-10">Terbuka untuk proyek freelance, kolaborasi,
                         atau sekadar ngobrol soal desain dan teknologi. Respons dalam 24 jam.</p>
                     <div class="space-y-5">
-                        <a href="mailto:nori@email.com" class="flex items-center gap-4 group">
+                        <a href="mailto:bagasb65nurdiansyah777@email.com" class="flex items-center gap-4 group">
                             <div
                                 class="w-10 h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 group-hover:bg-forest transition-colors">
                                 <i class="fa-solid fa-envelope text-gold text-sm"></i>
                             </div>
                             <div>
                                 <p class="text-white/30 text-xs">Email</p>
-                                <p class="text-white text-sm group-hover:text-gold transition-colors">nori@email.com</p>
+                                <p class="text-white text-sm group-hover:text-gold transition-colors">bagasb65nurdiansyah777@email.com</p>
                             </div>
                         </a>
-                        <a href="#" class="flex items-center gap-4 group">
+                        <a href="https://www.linkedin.com/in/bagas-nurdiansyah-026016289" class="flex items-center gap-4 group">
                             <div
                                 class="w-10 h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 group-hover:bg-forest transition-colors">
                                 <i class="fa-brands fa-linkedin-in text-gold text-sm"></i>
@@ -539,10 +539,10 @@
                             <div>
                                 <p class="text-white/30 text-xs">LinkedIn</p>
                                 <p class="text-white text-sm group-hover:text-gold transition-colors">
-                                    linkedin.com/in/noriishere</p>
+                                    linkedin.com/in/bagas-nurdiansyah-026016289</p>
                             </div>
                         </a>
-                        <a href="#" class="flex items-center gap-4 group">
+                        <a href="https://github.com/noriishere  " class="flex items-center gap-4 group">
                             <div
                                 class="w-10 h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 group-hover:bg-forest transition-colors">
                                 <i class="fa-brands fa-github text-gold text-sm"></i>
@@ -590,23 +590,28 @@
     <footer class="bg-black border-t border-forest/20 py-8">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
             <span class="text-gold font-bold tracking-wider">Noriishere</span>
-            <p class="text-white/20 text-xs">Built with intention — 2024</p>
+            <p class="text-white/20 text-xs">Built with intention — 2026</p>
             <div class="flex gap-4">
-                <a href="#" class="text-white/30 hover:text-gold transition-colors text-sm"><i
+                <a href="https://github.com/noriishere" class="text-white/30 hover:text-gold transition-colors text-sm"><i
                         class="fa-brands fa-github"></i></a>
-                <a href="#" class="text-white/30 hover:text-gold transition-colors text-sm"><i
+                <a href="https://www.linkedin.com/in/bagas-nurdiansyah-026016289" class="text-white/30 hover:text-gold transition-colors text-sm"><i
                         class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" class="text-white/30 hover:text-gold transition-colors text-sm"><i
-                        class="fa-brands fa-dribbble"></i></a>
-                <a href="#" class="text-white/30 hover:text-gold transition-colors text-sm"><i
+                <a href="https://instagram.com/bagasnrdiansy" class="text-white/30 hover:text-gold transition-colors text-sm"><i
                         class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </footer>
+    <script>
+        async function getProjects() {
+            const res = await fetch("https://api.github.com/users/USERNAME/repos");
+            const data = await res.json();
+
+            return data;
+        }
+    </script>
     <script src="asset/project.js"></script>
-    
-    <!-- <script>
-        const container = document.getElementById("project-list");
+    <script>
+        const container = document.getElementById("projects");
 
         projects.forEach(p => {
             const techList = p.tech.map(t => `
@@ -640,52 +645,6 @@
   `;
 
             container.innerHTML += card;
-        });
-    </script> -->
-
-    <script>
-        document.addEventListener("DOMContentLoaded", async () => {
-            const container = document.getElementById("project-list");
-
-            const res = await fetch("https://api.github.com/users/noriishere/repos");
-            const repos = await res.json();
-
-            repos.slice(0, 6).forEach(repo => {
-                const card = `<div>${repo.name}</div>`;
-                container.innerHTML += card;
-            });
-        });
-    </script>
-    <script>
-        const container = document.getElementById("project-list");
-
-        getProjects().then(repos => {
-            repos.slice(0, 6).forEach(repo => {
-                const card = `
-    <div class="card-hover animate-on-scroll bg-forest/10 border border-forest/30 overflow-hidden group">
-      <div class="p-6">
-        <h3 class="text-white font-bold text-base mb-2">${repo.name}</h3>
-        <p class="text-white/40 text-xs leading-relaxed mb-4">
-          ${repo.description || "No description"}
-        </p>
-
-        <div class="flex gap-4">
-          <a href="${repo.html_url}" target="_blank"
-            class="text-gold text-xs flex items-center gap-1 hover:text-yellow-400">
-            <i class="fa-brands fa-github"></i> Code
-          </a>
-
-          <a href="${repo.homepage || '#'}" target="_blank"
-            class="text-gold text-xs flex items-center gap-1 hover:text-yellow-400">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
-          </a>
-        </div>
-      </div>
-    </div>
-    `;
-
-                container.innerHTML += card;
-            });
         });
     </script>
 
