@@ -603,14 +603,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        async function getProjects() {
-            const res = await fetch("https://api.github.com/users/noriishere/repos");
-            const data = await res.json();
-
-            return data;
-        }
-    </script>
     <script src="asset/project.js"></script>
     <!-- <script>
         const container = document.getElementById("project-list");
@@ -649,6 +641,20 @@
             container.innerHTML += card;
         });
     </script> -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const container = document.getElementById("project-list");
+
+            const res = await fetch("https://api.github.com/users/USERNAME/repos");
+            const repos = await res.json();
+
+            repos.slice(0, 6).forEach(repo => {
+                const card = `<div>${repo.name}</div>`;
+                container.innerHTML += card;
+            });
+        });
+    </script>
     <script>
         const container = document.getElementById("project-list");
 
