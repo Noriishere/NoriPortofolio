@@ -78,9 +78,11 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            background-image: url("asset/background.png");
             pointer-events: none;
             z-index: 1;
+            background-size: cover;
+            opacity: 0.3;
         }
 
         .gold-line {
@@ -229,7 +231,7 @@
             </div>
             <div style="animation: fadeUp 0.8s ease forwards; opacity: 0; animation-delay: 0.6s">
                 <h2 class="text-white/60 text-xl md:text-2xl font-light mb-6">
-                    UI/UX Designer & Frontend Developer
+                    QA Engineer & Backend Developer
                 </h2>
             </div>
             <div style="animation: fadeUp 0.8s ease forwards; opacity: 0; animation-delay: 0.8s"
@@ -280,7 +282,7 @@
                         <i class="fa-solid fa-user mr-2"></i>About Me
                     </p>
                     <h2 class="text-white text-4xl font-black mb-6 leading-tight">
-                        Designing with <span class="text-gold">intention</span>,<br>building with precision.
+                        Programming with <span class="text-gold">intention</span>,<br>building with precision.
                     </h2>
                     <div class="flex items-center gap-3 mb-8"><span class="gold-line"></span></div>
                     <p class="text-white/50 text-sm leading-relaxed mb-4">
@@ -288,14 +290,14 @@
                         tapi juga terasa alami saat digunakan. Setiap piksel yang saya tempatkan punya alasan.
                     </p>
                     <p class="text-white/50 text-sm leading-relaxed mb-8">
-                        Background saya di desain dan pengembangan frontend memberi saya perspektif unik untuk
+                        Background saya di desain dan pengembangan Backend memberi saya perspektif unik untuk
                         menjembatani gap antara estetika dan fungsionalitas.
                     </p>
                     <div class="flex flex-wrap gap-3">
                         <span class="bg-forest/40 border border-forest text-gold text-xs px-4 py-2"><i
                                 class="fa-brands fa-figma mr-1"></i> Figma</span>
                         <span class="bg-forest/40 border border-forest text-gold text-xs px-4 py-2"><i
-                                class="fa-brands fa-react mr-1"></i> React</span>
+                                class="fa-brands fa-laravel mr-1"></i> Laravel</span>
                         <span class="bg-forest/40 border border-forest text-gold text-xs px-4 py-2"><i
                                 class="fa-brands fa-js mr-1"></i> JavaScript</span>
                         <span class="bg-forest/40 border border-forest text-gold text-xs px-4 py-2"><i
@@ -307,10 +309,9 @@
                         <div class="bg-forest/20 border border-forest/30 p-8">
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="bg-black/60 border border-forest/20 p-5">
-                                    <i class="fa-solid fa-palette text-gold text-2xl mb-3 block"></i>
-                                    <p class="text-white font-semibold text-sm mb-1">UI Design</p>
-                                    <p class="text-white/40 text-xs leading-relaxed">Visual identity, components, design
-                                        systems.</p>
+                                    <i class="fa-solid fa-code-branch text-gold text-2xl mb-3 block"></i>
+                                    <p class="text-white font-semibold text-sm mb-1">APi</p>
+                                    <p class="text-white/40 text-xs leading-relaxed">Design and implementation of RESTful APIs.</p>
                                 </div>
                                 <div class="bg-black/60 border border-forest/20 p-5">
                                     <i class="fa-solid fa-magnifying-glass text-gold text-2xl mb-3 block"></i>
@@ -320,9 +321,9 @@
                                 </div>
                                 <div class="bg-black/60 border border-forest/20 p-5">
                                     <i class="fa-solid fa-code text-gold text-2xl mb-3 block"></i>
-                                    <p class="text-white font-semibold text-sm mb-1">Frontend Dev</p>
-                                    <p class="text-white/40 text-xs leading-relaxed">React, HTML/CSS, Tailwind,
-                                        animations.</p>
+                                    <p class="text-white font-semibold text-sm mb-1">Backend Dev</p>
+                                    <p class="text-white/40 text-xs leading-relaxed">Laravel, Node.js, databases,
+                                        authentication.</p>
                                 </div>
                                 <div class="bg-black/60 border border-forest/20 p-5">
                                     <i class="fa-solid fa-mobile-screen text-gold text-2xl mb-3 block"></i>
@@ -354,7 +355,7 @@
                     <div class="skill-item">
                         <div class="flex justify-between mb-2">
                             <span class="text-white text-sm font-medium"><i
-                                    class="fa-brands fa-figma text-gold mr-2"></i>Figma / UI Design</span>
+                                    class="fa-solid fa-pencil text-gold mr-2"></i>Canva</span>
                             <span class="text-gold text-sm font-bold">92%</span>
                         </div>
                         <div class="h-1 bg-white/10 w-full">
@@ -426,20 +427,28 @@
                     <div class="skill-item">
                         <div class="flex justify-between mb-2">
                             <span class="text-white text-sm font-medium"><i
-                                    class="fa-solid fa-users text-gold mr-2"></i>UX Research</span>
-                            <span class="text-gold text-sm font-bold">78%</span>
+                                    class="fa-brands fa-php text-gold mr-2"></i>PHP</span>
+                            <span class="text-gold text-sm font-bold">75%</span>
                         </div>
                         <div class="h-1 bg-white/10 w-full">
-                            <div class="h-1 bg-gold skill-bar-fill" data-width="78%" style="width:0%"></div>
+                            <div class="h-1 bg-gold skill-bar-fill" data-width="75%" style="width:0%"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- PROJECTS -->
-    <div id="projects" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <div class="text-center mb-16 animate-on-scroll">
+        <p class="text-forest-light text-xs tracking-[0.3em] uppercase font-semibold mb-3">
+            <i class="fa-solid fa-briefcase mr-2"></i>Projects
+        </p>
+        <h2 class="text-white text-4xl font-black">Individual or <span class="text-gold">Team Projects</span></h2>
+    </div>
+    <div id="projects" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    </div>
 
     <!-- EXPERIENCE -->
     <section id="experience" class="py-28 bg-black border-t border-forest/20">
@@ -528,10 +537,12 @@
                             </div>
                             <div>
                                 <p class="text-white/30 text-xs">Email</p>
-                                <p class="text-white text-sm group-hover:text-gold transition-colors">bagasb65nurdiansyah777@email.com</p>
+                                <p class="text-white text-sm group-hover:text-gold transition-colors">
+                                    bagasb65nurdiansyah777@email.com</p>
                             </div>
                         </a>
-                        <a href="https://www.linkedin.com/in/bagas-nurdiansyah-026016289" class="flex items-center gap-4 group">
+                        <a href="https://www.linkedin.com/in/bagas-nurdiansyah-026016289"
+                            class="flex items-center gap-4 group">
                             <div
                                 class="w-10 h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 group-hover:bg-forest transition-colors">
                                 <i class="fa-brands fa-linkedin-in text-gold text-sm"></i>
@@ -592,11 +603,14 @@
             <span class="text-gold font-bold tracking-wider">Noriishere</span>
             <p class="text-white/20 text-xs">Built with intention — 2026</p>
             <div class="flex gap-4">
-                <a href="https://github.com/noriishere" class="text-white/30 hover:text-gold transition-colors text-sm"><i
+                <a href="https://github.com/noriishere"
+                    class="text-white/30 hover:text-gold transition-colors text-sm"><i
                         class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/bagas-nurdiansyah-026016289" class="text-white/30 hover:text-gold transition-colors text-sm"><i
+                <a href="https://www.linkedin.com/in/bagas-nurdiansyah-026016289"
+                    class="text-white/30 hover:text-gold transition-colors text-sm"><i
                         class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://instagram.com/bagasnrdiansy" class="text-white/30 hover:text-gold transition-colors text-sm"><i
+                <a href="https://instagram.com/bagasnrdiansy"
+                    class="text-white/30 hover:text-gold transition-colors text-sm"><i
                         class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
@@ -633,11 +647,11 @@
         ${techList}
       </div>
       <div class="flex gap-4">
-        <a href="#" class="text-gold text-xs flex items-center gap-1 hover:text-yellow-400 transition-colors">
-          <i class="fa-brands fa-github"></i> Code
+        <a href="${p.repoUrl || '#'}" class="text-gold text-xs flex items-center gap-1 hover:text-yellow-400 transition-colors">
+          <i class="fa-brands fa-github"></i> ${p.repoUrl ? 'Repo' : 'Private Repo'}
         </a>
-        <a href="#" class="text-gold text-xs flex items-center gap-1 hover:text-yellow-400 transition-colors">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+        <a href="${p.liveUrl || '#'}" class="text-gold text-xs flex items-center gap-1 hover:text-yellow-400 transition-colors">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> ${p.liveUrl ? 'Live' : 'on-going'}
         </a>
       </div>
     </div>
