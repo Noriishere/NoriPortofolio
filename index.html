@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noriishere – Backend Portfolio</title>
+    <title>Noriishere Portfolio Backend</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet">
@@ -38,7 +38,6 @@
             overflow-x: hidden;
         }
 
-        /* Animasi yang lebih halus dengan cubic-bezier */
         @keyframes fadeUpSmooth {
             from {
                 opacity: 0;
@@ -78,7 +77,7 @@
             pointer-events: none;
             z-index: 1;
             background-size: cover;
-            opacity: 0.2; /* Dibuat lebih tipis agar tidak mengganggu bacaan */
+            opacity: 0.2; 
         }
 
         .gold-line {
@@ -152,7 +151,6 @@
             background: linear-gradient(to bottom, #DAA520, transparent);
         }
 
-        /* Transisi elemen saat di scroll menjadi lebih lembut */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(40px);
@@ -184,12 +182,13 @@
     </style>
 </head>
 
-<body class="bg-black">
+<body class="bg-black relative">
 
     <!-- NAV -->
     <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-forest-dark transition-all duration-300">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between relative">
             <span class="text-gold font-bold text-xl tracking-wider">Noriishere</span>
+            
             <div class="hidden md:flex items-center gap-8">
                 <a href="#about" class="nav-link text-gold text-sm font-medium opacity-80 hover:opacity-100">Tentang</a>
                 <a href="#skills" class="nav-link text-gold text-sm font-medium opacity-80 hover:opacity-100">Keahlian</a>
@@ -197,16 +196,19 @@
                 <a href="#experience" class="nav-link text-gold text-sm font-medium opacity-80 hover:opacity-100">Pengalaman</a>
                 <a href="#contact" class="bg-forest text-gold text-sm font-semibold px-5 py-2 rounded-sm hover:bg-forest-light transition-colors">Kontak</a>
             </div>
-            <button id="menu-btn" class="md:hidden text-gold text-xl">
+            
+            <button id="menu-btn" class="md:hidden text-gold text-xl focus:outline-none">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-forest-dark px-6 py-4 flex flex-col gap-4">
-            <a href="#about" class="text-gold text-sm">Tentang</a>
-            <a href="#skills" class="text-gold text-sm">Keahlian</a>
-            <a href="#projects" class="text-gold text-sm">Proyek</a>
-            <a href="#experience" class="text-gold text-sm">Pengalaman</a>
-            <a href="#contact" class="text-gold text-sm">Kontak</a>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-black/95 backdrop-blur-md border-b border-forest-dark px-6 py-6 shadow-2xl flex-col gap-6 z-40">
+            <a href="#about" class="text-gold text-base font-medium">Tentang</a>
+            <a href="#skills" class="text-gold text-base font-medium">Keahlian</a>
+            <a href="#projects" class="text-gold text-base font-medium">Proyek</a>
+            <a href="#experience" class="text-gold text-base font-medium">Pengalaman</a>
+            <a href="#contact" class="text-gold text-base font-medium">Kontak</a>
         </div>
     </nav>
 
@@ -218,31 +220,31 @@
             DATA
         </div>
 
-        <div class="relative z-10 max-w-6xl mx-auto px-6 w-full mt-10">
+        <div class="relative z-10 max-w-6xl mx-auto px-6 w-full mt-16 md:mt-10">
             <div style="animation: slideRightSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.2s">
-                <p class="text-forest-light text-sm font-semibold tracking-[0.3em] uppercase mb-4">
+                <p class="text-forest-light text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4">
                     <i class="fa-solid fa-server mr-2"></i>Sistem Terdistribusi
                 </p>
             </div>
             <div style="animation: fadeUpSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.4s">
-                <h1 class="text-white text-5xl md:text-7xl font-black leading-none mb-2">
+                <h1 class="text-white text-5xl sm:text-6xl md:text-7xl font-black leading-none mb-2">
                     Bagas<span class="text-gold"> N.</span>
                 </h1>
             </div>
             <div style="animation: fadeUpSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.5s">
-                <h2 class="text-white/60 text-xl md:text-2xl font-light mb-6">
+                <h2 class="text-white/60 text-lg sm:text-xl md:text-2xl font-light mb-6">
                     Pengembang Backend
                 </h2>
             </div>
             <div style="animation: fadeUpSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.6s" class="flex items-center gap-3 mb-10">
                 <span class="gold-line"></span>
-                <p class="text-white/50 text-sm tracking-wide">Merancang arsitektur perangkat lunak yang tangguh dan skalabel</p>
+                <p class="text-white/50 text-xs sm:text-sm tracking-wide max-w-md">Merancang arsitektur perangkat lunak yang tangguh dan skalabel</p>
             </div>
             <div style="animation: fadeUpSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.7s" class="flex flex-wrap gap-4">
-                <a href="#projects" class="bg-gold text-black font-bold px-8 py-3 text-sm tracking-wide hover:bg-yellow-400 transition-colors flex items-center gap-2 rounded-sm shadow-[0_0_15px_rgba(218,165,32,0.3)] hover:shadow-[0_0_25px_rgba(218,165,32,0.5)]">
+                <a href="#projects" class="w-full sm:w-auto text-center bg-gold text-black font-bold px-8 py-3 text-sm tracking-wide hover:bg-yellow-400 transition-colors flex items-center justify-center gap-2 rounded-sm shadow-[0_0_15px_rgba(218,165,32,0.3)] hover:shadow-[0_0_25px_rgba(218,165,32,0.5)]">
                     <i class="fa-solid fa-code"></i> Lihat Proyek
                 </a>
-                <a href="#contact" class="border border-forest text-gold font-semibold px-8 py-3 text-sm tracking-wide hover:bg-forest/30 transition-colors flex items-center gap-2 rounded-sm">
+                <a href="#contact" class="w-full sm:w-auto text-center border border-forest text-gold font-semibold px-8 py-3 text-sm tracking-wide hover:bg-forest/30 transition-colors flex items-center justify-center gap-2 rounded-sm">
                     <i class="fa-solid fa-terminal"></i> Hubungi Saya
                 </a>
             </div>
@@ -255,14 +257,14 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="py-28 bg-black">
+    <section id="about" class="py-16 md:py-28 bg-black">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div class="animate-on-scroll">
                     <p class="text-forest-light text-xs tracking-[0.3em] uppercase font-semibold mb-3">
                         <i class="fa-solid fa-user-shield mr-2"></i>Profil
                     </p>
-                    <h2 class="text-white text-4xl font-black mb-6 leading-tight">
+                    <h2 class="text-white text-3xl md:text-4xl font-black mb-6 leading-tight">
                         Membangun fondasi digital yang <span class="text-gold">kokoh</span> dan efisien.
                     </h2>
                     <div class="flex items-center gap-3 mb-8"><span class="gold-line"></span></div>
@@ -280,9 +282,9 @@
                     </div>
                 </div>
                 <div class="animate-on-scroll" style="transition-delay: 0.15s">
-                    <div class="relative">
-                        <div class="bg-forest/10 border border-forest/30 p-8 rounded-sm backdrop-blur-sm">
-                            <div class="grid grid-cols-2 gap-4">
+                    <div class="relative mt-8 lg:mt-0">
+                        <div class="bg-forest/10 border border-forest/30 p-6 sm:p-8 rounded-sm backdrop-blur-sm">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div class="bg-black/80 border border-forest/20 p-5 rounded-sm hover:border-gold/50 transition-colors">
                                     <i class="fa-solid fa-network-wired text-gold text-2xl mb-3 block"></i>
                                     <p class="text-white font-semibold text-sm mb-1">Pengembangan API</p>
@@ -305,8 +307,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-gold"></div>
-                        <div class="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-gold"></div>
+                        <div class="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-gold hidden sm:block"></div>
+                        <div class="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-gold hidden sm:block"></div>
                     </div>
                 </div>
             </div>
@@ -314,15 +316,15 @@
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="py-28 bg-black border-t border-forest/20 relative">
+    <section id="skills" class="py-16 md:py-28 bg-black border-t border-forest/20 relative">
         <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-16 animate-on-scroll">
+            <div class="text-center mb-12 md:mb-16 animate-on-scroll">
                 <p class="text-forest-light text-xs tracking-[0.3em] uppercase font-semibold mb-3">
                     <i class="fa-solid fa-code-compare mr-2"></i>Kompetensi
                 </p>
-                <h2 class="text-white text-4xl font-black">Teknologi <span class="text-gold">Utama</span></h2>
+                <h2 class="text-white text-3xl md:text-4xl font-black">Teknologi <span class="text-gold">Utama</span></h2>
             </div>
-            <div class="grid md:grid-cols-2 gap-10 animate-on-scroll" style="transition-delay: 0.1s">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-10 animate-on-scroll" style="transition-delay: 0.1s">
                 <div class="space-y-6">
                     <div class="skill-item">
                         <div class="flex justify-between mb-2">
@@ -386,61 +388,76 @@
     </section>
     
     <!-- PROJECTS -->
-    <section class="py-28 bg-black border-t border-forest/20">
+    <section class="py-16 md:py-28 bg-black border-t border-forest/20">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16 animate-on-scroll">
+            <div class="text-center mb-12 md:mb-16 animate-on-scroll">
                 <p class="text-forest-light text-xs tracking-[0.3em] uppercase font-semibold mb-3">
                     <i class="fa-solid fa-folder-open mr-2"></i>Karya
                 </p>
-                <h2 class="text-white text-4xl font-black">Implementasi <span class="text-gold">Sistem</span></h2>
+                <h2 class="text-white text-3xl md:text-4xl font-black">Implementasi <span class="text-gold">Sistem</span></h2>
             </div>
             
-            <!-- Proyek dirender langsung tanpa perlu file eksternal agar lebih instan -->
-            <div id="projects" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Data akan dimuat melalui JavaScript internal di bagian bawah -->
+            <div id="projects" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Data dirender melalui JavaScript internal -->
             </div>
         </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="py-28 bg-black border-t border-forest/20">
+    <section id="experience" class="py-16 md:py-28 bg-black border-t border-forest/20">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16 animate-on-scroll">
+            <div class="text-center mb-12 md:mb-16 animate-on-scroll">
                 <p class="text-forest-light text-xs tracking-[0.3em] uppercase font-semibold mb-3">
                     <i class="fa-solid fa-briefcase mr-2"></i>Rekam Jejak
                 </p>
-                <h2 class="text-white text-4xl font-black">Pengalaman <span class="text-gold">Profesional</span></h2>
+                <h2 class="text-white text-3xl md:text-4xl font-black">Pengalaman <span class="text-gold">Profesional</span></h2>
             </div>
             <div class="max-w-3xl mx-auto space-y-0">
-                <div class="animate-on-scroll relative pl-10">
+                <div class="animate-on-scroll relative pl-8 md:pl-10">
                     <div class="timeline-dot absolute left-0 top-1.5"></div>
                     <div class="timeline-line"></div>
-                    <div class="bg-forest/10 border border-forest/30 p-6 mb-6 rounded-sm hover:border-gold/30 transition-colors">
-                        <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+                    <div class="bg-forest/10 border border-forest/30 p-5 md:p-6 mb-6 rounded-sm hover:border-gold/30 transition-colors">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
                             <div>
-                                <h3 class="text-white font-bold text-base">Pengembang Backend Independen</h3>
-                                <p class="text-gold text-xs mt-0.5">Berbagai Proyek Digital</p>
+                                <h3 class="text-white font-bold text-base md:text-lg">Pengembang Backend Independen</h3>
+                                <p class="text-gold text-xs mt-1">Berbagai Proyek Digital</p>
                             </div>
-                            <span class="text-white/30 text-xs border border-white/10 px-3 py-1 flex items-center gap-1 rounded-sm">
+                            <span class="text-white/30 text-xs border border-white/10 px-3 py-1 flex items-center gap-1 rounded-sm w-fit">
                                 <i class="fa-regular fa-calendar text-gold/50"></i> 2024 Sekarang
                             </span>
                         </div>
-                        <p class="text-white/40 text-xs leading-relaxed">Merancang kerangka dasar aplikasi pasar daring, membuat dokumentasi API secara mendetail, dan menerapkan modul keamanan pertukaran data.</p>
+                        <p class="text-white/40 text-xs md:text-sm leading-relaxed">Merancang kerangka dasar aplikasi pasar daring, membuat dokumentasi API secara mendetail, dan menerapkan modul keamanan pertukaran data.</p>
                     </div>
                 </div>
-                <div class="animate-on-scroll relative pl-10" style="transition-delay:0.2s">
+                <div class="animate-on-scroll relative pl-8 md:pl-10" style="transition-delay:0.1s">
                     <div class="timeline-dot absolute left-0 top-1.5"></div>
-                    <div class="bg-forest/10 border border-forest/30 p-6 rounded-sm hover:border-gold/30 transition-colors">
-                        <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+                    <div class="timeline-line"></div>
+                    <div class="bg-forest/10 border border-forest/30 p-5 md:p-6 mb-6 rounded-sm hover:border-gold/30 transition-colors">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
                             <div>
-                                <h3 class="text-white font-bold text-base">Riset Mahasiswa Informatika</h3>
-                                <p class="text-gold text-xs mt-0.5">Universitas Buana Perjuangan Karawang</p>
+                                <h3 class="text-white font-bold text-base md:text-lg">Praktik Kerja Lapangan</h3>
+                                <p class="text-gold text-xs mt-1">PT Putraduta Buanasentosa</p>
                             </div>
-                            <span class="text-white/30 text-xs border border-white/10 px-3 py-1 flex items-center gap-1 rounded-sm">
+                            <span class="text-white/30 text-xs border border-white/10 px-3 py-1 flex items-center gap-1 rounded-sm w-fit">
+                                <i class="fa-regular fa-calendar text-gold/50"></i> Feb Mei 2025
+                            </span>
+                        </div>
+                        <p class="text-white/40 text-xs md:text-sm leading-relaxed">Berpartisipasi dalam peninjauan alur peladen internal dan mempelajari mekanisme pengelolaan basis data dalam lingkup operasional perusahaan yang nyata.</p>
+                    </div>
+                </div>
+                <div class="animate-on-scroll relative pl-8 md:pl-10" style="transition-delay:0.2s">
+                    <div class="timeline-dot absolute left-0 top-1.5"></div>
+                    <div class="bg-forest/10 border border-forest/30 p-5 md:p-6 rounded-sm hover:border-gold/30 transition-colors">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
+                            <div>
+                                <h3 class="text-white font-bold text-base md:text-lg">Riset Mahasiswa Informatika</h3>
+                                <p class="text-gold text-xs mt-1">Universitas Buana Perjuangan Karawang</p>
+                            </div>
+                            <span class="text-white/30 text-xs border border-white/10 px-3 py-1 flex items-center gap-1 rounded-sm w-fit">
                                 <i class="fa-regular fa-calendar text-gold/50"></i> 2023 2024
                             </span>
                         </div>
-                        <p class="text-white/40 text-xs leading-relaxed">Menyelesaikan berbagai tantangan pemrograman berorientasi objek, mendesain skema relasi entitas, serta mengembangkan aplikasi berbasis kerangka kerja lokal.</p>
+                        <p class="text-white/40 text-xs md:text-sm leading-relaxed">Menyelesaikan berbagai tantangan pemrograman berorientasi objek, mendesain skema relasi entitas, serta mengembangkan aplikasi berbasis kerangka kerja lokal.</p>
                     </div>
                 </div>
             </div>
@@ -448,53 +465,53 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="py-28 bg-forest/5 border-t border-forest/20">
+    <section id="contact" class="py-16 md:py-28 bg-forest/5 border-t border-forest/20">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-start">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                 <div class="animate-on-scroll">
                     <p class="text-forest-light text-xs tracking-[0.3em] uppercase font-semibold mb-3">
                         <i class="fa-solid fa-paper-plane mr-2"></i>Komunikasi
                     </p>
-                    <h2 class="text-white text-4xl font-black mb-6">Mari <span class="text-gold">Berdiskusi.</span></h2>
+                    <h2 class="text-white text-3xl md:text-4xl font-black mb-6">Mari <span class="text-gold">Berdiskusi.</span></h2>
                     <div class="flex items-center gap-3 mb-8"><span class="gold-line"></span></div>
                     <p class="text-white/50 text-sm leading-relaxed mb-10">Saya siap membantu merancang solusi di sisi peladen untuk aplikasi Anda atau sekadar bertukar pikiran mengenai perkembangan teknologi web saat ini.</p>
                     <div class="space-y-5">
                         <a href="mailto:if24.bagasnurdiansyah@mhs.ubpkarawang.ac.id" class="flex items-center gap-4 group">
-                            <div class="w-10 h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 rounded-sm group-hover:bg-forest transition-colors">
+                            <div class="w-12 h-12 md:w-10 md:h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 rounded-sm group-hover:bg-forest transition-colors">
                                 <i class="fa-solid fa-envelope text-gold text-sm group-hover:scale-110 transition-transform"></i>
                             </div>
-                            <div>
-                                <p class="text-white/30 text-xs">Surat Elektronik</p>
-                                <p class="text-white text-sm group-hover:text-gold transition-colors">
+                            <div class="overflow-hidden">
+                                <p class="text-white/30 text-xs mb-0.5">Surat Elektronik</p>
+                                <p class="text-white text-xs md:text-sm group-hover:text-gold transition-colors truncate">
                                     if24.bagasnurdiansyah@mhs.ubpkarawang.ac.id</p>
                             </div>
                         </a>
                         <a href="https://www.linkedin.com/in/bagas-nurdiansyah-026016289" target="_blank" class="flex items-center gap-4 group">
-                            <div class="w-10 h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 rounded-sm group-hover:bg-forest transition-colors">
+                            <div class="w-12 h-12 md:w-10 md:h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 rounded-sm group-hover:bg-forest transition-colors">
                                 <i class="fa-brands fa-linkedin-in text-gold text-sm group-hover:scale-110 transition-transform"></i>
                             </div>
                             <div>
-                                <p class="text-white/30 text-xs">Jejaring Profesional</p>
-                                <p class="text-white text-sm group-hover:text-gold transition-colors">
+                                <p class="text-white/30 text-xs mb-0.5">Jejaring Profesional</p>
+                                <p class="text-white text-xs md:text-sm group-hover:text-gold transition-colors">
                                     Bagas Nurdiansyah</p>
                             </div>
                         </a>
                         <a href="https://github.com/noriishere" target="_blank" class="flex items-center gap-4 group">
-                            <div class="w-10 h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 rounded-sm group-hover:bg-forest transition-colors">
+                            <div class="w-12 h-12 md:w-10 md:h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 rounded-sm group-hover:bg-forest transition-colors">
                                 <i class="fa-brands fa-github text-gold text-sm group-hover:scale-110 transition-transform"></i>
                             </div>
                             <div>
-                                <p class="text-white/30 text-xs">Repositori Kode</p>
-                                <p class="text-white text-sm group-hover:text-gold transition-colors">
+                                <p class="text-white/30 text-xs mb-0.5">Repositori Kode</p>
+                                <p class="text-white text-xs md:text-sm group-hover:text-gold transition-colors">
                                     github.com/noriishere</p>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="animate-on-scroll" style="transition-delay:0.15s">
-                    <div class="bg-black border border-forest/30 p-8 relative rounded-sm">
-                        <div class="absolute -top-2 -left-2 w-5 h-5 border-t-2 border-l-2 border-gold"></div>
-                        <div class="absolute -bottom-2 -right-2 w-5 h-5 border-b-2 border-r-2 border-gold"></div>
+                    <div class="bg-black border border-forest/30 p-6 md:p-8 relative rounded-sm">
+                        <div class="absolute -top-2 -left-2 w-5 h-5 border-t-2 border-l-2 border-gold hidden sm:block"></div>
+                        <div class="absolute -bottom-2 -right-2 w-5 h-5 border-b-2 border-r-2 border-gold hidden sm:block"></div>
                         <div class="space-y-5">
                             <div>
                                 <label class="text-white/40 text-xs tracking-wider uppercase block mb-2">Nama Lengkap</label>
@@ -512,7 +529,7 @@
                                     class="w-full bg-white/5 border border-forest/30 rounded-sm text-white text-sm px-4 py-3 outline-none focus:border-gold focus:bg-white/10 transition-all placeholder-white/20 resize-none"></textarea>
                             </div>
                             <button
-                                class="w-full bg-gold text-black font-bold py-3 rounded-sm text-sm tracking-wide hover:bg-yellow-400 hover:shadow-[0_0_15px_rgba(218,165,32,0.4)] transition-all flex items-center justify-center gap-2">
+                                class="w-full bg-gold text-black font-bold py-3 md:py-4 rounded-sm text-sm tracking-wide hover:bg-yellow-400 hover:shadow-[0_0_15px_rgba(218,165,32,0.4)] transition-all flex items-center justify-center gap-2 mt-2">
                                 <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
                             </button>
                         </div>
@@ -524,19 +541,18 @@
 
     <!-- FOOTER -->
     <footer class="bg-black border-t border-forest/20 py-8">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
             <span class="text-gold font-bold tracking-wider">Noriishere</span>
-            <p class="text-white/20 text-xs">Dikodekan dengan keakuratan logika © 2026</p>
-            <div class="flex gap-4">
-                <a href="https://github.com/noriishere" class="text-white/30 hover:text-gold transition-colors text-sm"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/bagas-nurdiansyah-026016289" class="text-white/30 hover:text-gold transition-colors text-sm"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://instagram.com/bagasnrdiansy" class="text-white/30 hover:text-gold transition-colors text-sm"><i class="fa-brands fa-instagram"></i></a>
+            <p class="text-white/20 text-xs text-center md:text-left">Dikodekan dengan keakuratan logika © 2026</p>
+            <div class="flex gap-6 md:gap-4">
+                <a href="https://github.com/noriishere" class="text-white/30 hover:text-gold transition-colors text-base md:text-sm"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/bagas-nurdiansyah-026016289" class="text-white/30 hover:text-gold transition-colors text-base md:text-sm"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/bagasnrdiansy" class="text-white/30 hover:text-gold transition-colors text-base md:text-sm"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </footer>
 
     <script>
-        // Data proyek disertakan secara internal agar mempermudah uji coba tanpa dependensi eksternal
         const projectsData = [
             {
                 title: "Vaultify API & Logic",
@@ -545,8 +561,8 @@
                 icon: "fa-shield-halved",
                 label: "Keamanan",
                 labelStyle: "text-red-400",
-                repoUrl: "https://github.com/Noriishere/Vaultify.git",
-                liveUrl: "https://play.google.com/store/apps/details?id=com.naltylabs.vaultify&pcampaignid=web_share",
+                repoUrl: "https://github.com/Noriishere/Vaultify",
+                liveUrl: "https://play.google.com/store/apps/details?id=com.naltylabs.vaultify",
                 delay: "0s"
             },
             {
@@ -562,7 +578,7 @@
             },
             {
                 title: "API Manajemen Restoran",
-                desc: "Merancang antarmuka pemrograman aplikasi berkinerja tinggi menggunakan kerangka kerja FastAPI untuk mengelola data menu dan transaksi restoran secara efisien.",
+                desc: "Merancang antarmuka pemrograman aplikasi berkinerja tinggi menggunakan kerangka kerja FastAPI untuk mengelola data menu dan transaksi.",
                 tech: ["FastAPI", "Python", "SQL"],
                 icon: "fa-network-wired",
                 label: "Layanan Web",
@@ -577,24 +593,24 @@
 
         projectsData.forEach(p => {
             const techList = p.tech.map(t => `
-                <span class="text-gold/70 text-xs border border-gold/20 rounded-sm px-2 py-1 bg-gold/5">${t}</span>
+                <span class="text-gold/70 text-xs border border-gold/20 rounded-sm px-2 py-1 bg-gold/5 whitespace-nowrap">${t}</span>
             `).join('');
 
             const card = `
-            <div class="card-hover animate-on-scroll bg-forest/10 border border-forest/30 overflow-hidden group rounded-sm" style="transition-delay:${p.delay}">
-                <div class="project-img-placeholder h-40 relative overflow-hidden">
+            <div class="card-hover animate-on-scroll bg-forest/10 border border-forest/30 overflow-hidden group rounded-sm flex flex-col h-full" style="transition-delay:${p.delay}">
+                <div class="project-img-placeholder h-40 md:h-48 relative overflow-hidden flex-shrink-0">
                     <div class="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity">
                         <i class="fa-solid ${p.icon} text-gold/20 text-6xl group-hover:scale-110 group-hover:text-gold/40 transition-all duration-700"></i>
                     </div>
                     <div class="absolute top-3 right-3 ${p.labelStyle} text-xs font-bold px-2 py-1 bg-black/50 rounded-sm backdrop-blur-sm border border-white/5">${p.label}</div>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-white font-bold text-base mb-2 group-hover:text-gold transition-colors">${p.title}</h3>
-                    <p class="text-white/40 text-xs leading-relaxed mb-5 min-h-[60px]">${p.desc}</p>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-white font-bold text-base md:text-lg mb-2 group-hover:text-gold transition-colors">${p.title}</h3>
+                    <p class="text-white/40 text-xs md:text-sm leading-relaxed mb-5 flex-grow">${p.desc}</p>
                     <div class="flex flex-wrap gap-2 mb-6">
                         ${techList}
                     </div>
-                    <div class="flex gap-4 border-t border-forest/20 pt-4 mt-auto">
+                    <div class="flex flex-wrap gap-4 border-t border-forest/20 pt-4 mt-auto">
                         <a href="${p.repoUrl || '#'}" class="text-gold/80 text-xs flex items-center gap-1.5 hover:text-yellow-400 transition-colors">
                             <i class="fa-brands fa-github text-sm"></i> ${p.repoUrl ? 'Repositori' : 'Kode Privat'}
                         </a>
@@ -611,17 +627,15 @@
     </script>
 
     <script>
-        // Logika pengamatan kemunculan elemen saat layar digulir
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
+            rootMargin: "0px 0px -20px 0px"
         };
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(el => { 
                 if (el.isIntersecting) {
                     el.target.classList.add('visible');
-                    // Berhenti memantau elemen setelah muncul agar meringankan beban render
                     observer.unobserve(el.target);
                 }
             });
@@ -629,12 +643,10 @@
         
         document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
-        // Animasi persentase keahlian bar
         const skillObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
-                        // Menambahkan sedikit jeda agar transisi lebih natural
                         setTimeout(() => {
                             bar.style.width = bar.dataset.width;
                         }, 200);
@@ -645,20 +657,35 @@
         }, { threshold: 0.2 });
         document.querySelectorAll('#skills').forEach(el => skillObserver.observe(el));
 
-        // Interaksi menu untuk tampilan gawai seluler
-        document.getElementById('menu-btn').addEventListener('click', () => {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn.querySelector('i');
+
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
         });
 
-        // Pengguliran mulus antar tautan
         document.querySelectorAll('a[href^="#"]').forEach(a => {
             a.addEventListener('click', e => {
                 const target = document.querySelector(a.getAttribute('href'));
                 if (target) {
                     e.preventDefault();
                     target.scrollIntoView({ behavior: 'smooth' });
-                    document.getElementById('mobile-menu').classList.add('hidden');
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
                 }
             });
         });
