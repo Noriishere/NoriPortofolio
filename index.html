@@ -423,41 +423,25 @@
                                 <p class="text-gold text-xs mt-1">Berbagai Proyek Digital</p>
                             </div>
                             <span class="text-white/30 text-xs border border-white/10 px-3 py-1 flex items-center gap-1 rounded-sm w-fit">
-                                <i class="fa-regular fa-calendar text-gold/50"></i> 2024 Sekarang
+                                <i class="fa-regular fa-calendar text-gold/50"></i> 2024 - Sekarang
                             </span>
                         </div>
-                        <p class="text-white/40 text-xs md:text-sm leading-relaxed">Merancang kerangka dasar aplikasi pasar daring, membuat dokumentasi API secara mendetail, dan menerapkan modul keamanan pertukaran data.</p>
+                        <p class="text-white/40 text-xs md:text-sm leading-relaxed">Merancang kerangka dasar aplikasi web & REST API, mengoptimalisasi basis data relasional, dan menerapkan modul keamanan sistem.</p>
                     </div>
                 </div>
                 <div class="animate-on-scroll relative pl-8 md:pl-10" style="transition-delay:0.1s">
                     <div class="timeline-dot absolute left-0 top-1.5"></div>
-                    <div class="timeline-line"></div>
-                    <div class="bg-forest/10 border border-forest/30 p-5 md:p-6 mb-6 rounded-sm hover:border-gold/30 transition-colors">
-                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
-                            <div>
-                                <h3 class="text-white font-bold text-base md:text-lg">Praktik Kerja Lapangan</h3>
-                                <p class="text-gold text-xs mt-1">PT Putraduta Buanasentosa</p>
-                            </div>
-                            <span class="text-white/30 text-xs border border-white/10 px-3 py-1 flex items-center gap-1 rounded-sm w-fit">
-                                <i class="fa-regular fa-calendar text-gold/50"></i> Feb Mei 2025
-                            </span>
-                        </div>
-                        <p class="text-white/40 text-xs md:text-sm leading-relaxed">Berpartisipasi dalam peninjauan alur peladen internal dan mempelajari mekanisme pengelolaan basis data dalam lingkup operasional perusahaan yang nyata.</p>
-                    </div>
-                </div>
-                <div class="animate-on-scroll relative pl-8 md:pl-10" style="transition-delay:0.2s">
-                    <div class="timeline-dot absolute left-0 top-1.5"></div>
                     <div class="bg-forest/10 border border-forest/30 p-5 md:p-6 rounded-sm hover:border-gold/30 transition-colors">
                         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
                             <div>
-                                <h3 class="text-white font-bold text-base md:text-lg">Riset Mahasiswa Informatika</h3>
+                                <h3 class="text-white font-bold text-base md:text-lg">Riset & Studi Mahasiswa Informatika</h3>
                                 <p class="text-gold text-xs mt-1">Universitas Buana Perjuangan Karawang</p>
                             </div>
                             <span class="text-white/30 text-xs border border-white/10 px-3 py-1 flex items-center gap-1 rounded-sm w-fit">
-                                <i class="fa-regular fa-calendar text-gold/50"></i> 2023 2024
+                                <i class="fa-regular fa-calendar text-gold/50"></i> 2024 - Sekarang
                             </span>
                         </div>
-                        <p class="text-white/40 text-xs md:text-sm leading-relaxed">Menyelesaikan berbagai tantangan pemrograman berorientasi objek, mendesain skema relasi entitas, serta mengembangkan aplikasi berbasis kerangka kerja lokal.</p>
+                        <p class="text-white/40 text-xs md:text-sm leading-relaxed">Menyelesaikan berbagai tantangan pemrograman berorientasi objek, mendesain skema relasi entitas, serta mengembangkan aplikasi berbasis kerangka kerja modern.</p>
                     </div>
                 </div>
             </div>
@@ -552,46 +536,11 @@
         </div>
     </footer>
 
+    <script src="asset/project.js"></script>
     <script>
-        const projectsData = [
-            {
-                title: "Vaultify API & Logic",
-                desc: "Pengembangan layanan peladen untuk aplikasi penyimpanan fail terenkripsi menggunakan pustaka kriptografi termutakhir.",
-                tech: ["Node.js", "Express", "CryptoJS"],
-                icon: "fa-shield-halved",
-                label: "Keamanan",
-                labelStyle: "text-red-400",
-                repoUrl: "https://github.com/Noriishere/Vaultify",
-                liveUrl: "https://play.google.com/store/apps/details?id=com.naltylabs.vaultify",
-                delay: "0s"
-            },
-            {
-                title: "Lab Dimarii Peladen",
-                desc: "Arsitektur pengelolaan basis data pada situs pasar daring untuk mendistribusikan kode sumber dan lisensi aplikasi.",
-                tech: ["Laravel", "MySQL", "PHP"],
-                icon: "fa-server",
-                label: "E Commerce",
-                labelStyle: "text-green-400",
-                repoUrl: "https://github.com/noriishere",
-                liveUrl: "#",
-                delay: "0.1s"
-            },
-            {
-                title: "API Manajemen Restoran",
-                desc: "Merancang antarmuka pemrograman aplikasi berkinerja tinggi menggunakan kerangka kerja FastAPI untuk mengelola data menu dan transaksi.",
-                tech: ["FastAPI", "Python", "SQL"],
-                icon: "fa-network-wired",
-                label: "Layanan Web",
-                labelStyle: "text-blue-400",
-                repoUrl: "https://github.com/Noriishere/fastApi-restaurant",
-                liveUrl: "",
-                delay: "0.2s"
-            }
-        ];
-
         const container = document.getElementById("projects");
 
-        projectsData.forEach(p => {
+        projects.forEach(p => {
             const techList = p.tech.map(t => `
                 <span class="text-gold/70 text-xs border border-gold/20 rounded-sm px-2 py-1 bg-gold/5 whitespace-nowrap">${t}</span>
             `).join('');
@@ -611,10 +560,10 @@
                         ${techList}
                     </div>
                     <div class="flex flex-wrap gap-4 border-t border-forest/20 pt-4 mt-auto">
-                        <a href="${p.repoUrl || '#'}" class="text-gold/80 text-xs flex items-center gap-1.5 hover:text-yellow-400 transition-colors">
+                        <a href="${p.repoUrl || '#'}" target="_blank" class="text-gold/80 text-xs flex items-center gap-1.5 hover:text-yellow-400 transition-colors">
                             <i class="fa-brands fa-github text-sm"></i> ${p.repoUrl ? 'Repositori' : 'Kode Privat'}
                         </a>
-                        <a href="${p.liveUrl || '#'}" class="text-gold/80 text-xs flex items-center gap-1.5 hover:text-yellow-400 transition-colors">
+                        <a href="${p.liveUrl || '#'}" target="${p.liveUrl ? '_blank' : '_self'}" class="text-gold/80 text-xs flex items-center gap-1.5 hover:text-yellow-400 transition-colors">
                             <i class="fa-solid fa-server text-sm"></i> ${p.liveUrl ? 'Status Daring' : 'Dalam Proses'}
                         </a>
                     </div>
