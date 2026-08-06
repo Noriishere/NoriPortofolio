@@ -496,27 +496,27 @@
                     <div class="bg-black border border-forest/30 p-6 md:p-8 relative rounded-sm">
                         <div class="absolute -top-2 -left-2 w-5 h-5 border-t-2 border-l-2 border-gold hidden sm:block"></div>
                         <div class="absolute -bottom-2 -right-2 w-5 h-5 border-b-2 border-r-2 border-gold hidden sm:block"></div>
-                        <div class="space-y-5">
+                        <form id="contact-form" class="space-y-5">
                             <div>
-                                <label class="text-white/40 text-xs tracking-wider uppercase block mb-2">Nama Lengkap</label>
-                                <input type="text" placeholder="Ketik nama Anda di sini"
+                                <label for="contact-name" class="text-white/40 text-xs tracking-wider uppercase block mb-2">Nama Lengkap</label>
+                                <input type="text" id="contact-name" required placeholder="Ketik nama Anda di sini"
                                     class="w-full bg-white/5 border border-forest/30 rounded-sm text-white text-sm px-4 py-3 outline-none focus:border-gold focus:bg-white/10 transition-all placeholder-white/20">
                             </div>
                             <div>
-                                <label class="text-white/40 text-xs tracking-wider uppercase block mb-2">Alamat Email</label>
-                                <input type="email" placeholder="nama@perusahaan.com"
+                                <label for="contact-email" class="text-white/40 text-xs tracking-wider uppercase block mb-2">Alamat Email</label>
+                                <input type="email" id="contact-email" placeholder="nama@perusahaan.com"
                                     class="w-full bg-white/5 border border-forest/30 rounded-sm text-white text-sm px-4 py-3 outline-none focus:border-gold focus:bg-white/10 transition-all placeholder-white/20">
                             </div>
                             <div>
-                                <label class="text-white/40 text-xs tracking-wider uppercase block mb-2">Tujuan Pesan</label>
-                                <textarea rows="4" placeholder="Jelaskan kebutuhan teknis sistem Anda"
+                                <label for="contact-message" class="text-white/40 text-xs tracking-wider uppercase block mb-2">Tujuan Pesan</label>
+                                <textarea id="contact-message" rows="4" required placeholder="Jelaskan kebutuhan teknis sistem Anda"
                                     class="w-full bg-white/5 border border-forest/30 rounded-sm text-white text-sm px-4 py-3 outline-none focus:border-gold focus:bg-white/10 transition-all placeholder-white/20 resize-none"></textarea>
                             </div>
-                            <button
-                                class="w-full bg-gold text-black font-bold py-3 md:py-4 rounded-sm text-sm tracking-wide hover:bg-yellow-400 hover:shadow-[0_0_15px_rgba(218,165,32,0.4)] transition-all flex items-center justify-center gap-2 mt-2">
-                                <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
+                            <button type="submit"
+                                class="w-full bg-gold text-black font-bold py-3 md:py-4 rounded-sm text-sm tracking-wide hover:bg-yellow-400 hover:shadow-[0_0_15px_rgba(218,165,32,0.4)] transition-all flex items-center justify-center gap-2 mt-2 cursor-pointer">
+                                <i class="fa-solid fa-paper-plane"></i> Kirim Pesan via Gmail
                             </button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -638,6 +638,29 @@
                 }
             });
         });
+
+        // Contact Form Submission to Gmail
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('contact-name').value.trim();
+                const email = document.getElementById('contact-email').value.trim();
+                const message = document.getElementById('contact-message').value.trim();
+
+                const recipient = 'if24.bagasnurdiansyah@mhs.ubpkarawang.ac.id';
+                const subject = `Pesan Portofolio dari ${name}`;
+                const body = `Halo Bagas,\n\nNama: ${name}\nEmail: ${email || '-'}\n\nPesan:\n${message}`;
+
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipient)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                const newWin = window.open(gmailUrl, '_blank');
+                if (!newWin || newWin.closed || typeof newWin.closed === 'undefined') {
+                    window.location.href = mailtoUrl;
+                }
+            });
+        }
     </script>
 
 </body>
