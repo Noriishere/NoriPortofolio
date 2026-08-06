@@ -43,6 +43,7 @@
                 opacity: 0;
                 transform: translateY(40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -54,6 +55,7 @@
                 opacity: 0;
                 transform: translateX(-40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -61,9 +63,12 @@
         }
 
         @keyframes scrollBounce {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(8px);
             }
@@ -77,7 +82,7 @@
             pointer-events: none;
             z-index: 1;
             background-size: cover;
-            opacity: 0.2; 
+            opacity: 0.2;
         }
 
         .gold-line {
@@ -175,7 +180,7 @@
             background: #064E3B;
             border-radius: 3px;
         }
-        
+
         ::-webkit-scrollbar-thumb:hover {
             background: #DAA520;
         }
@@ -185,25 +190,31 @@
 <body class="bg-black relative">
 
     <!-- NAV -->
-    <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-forest-dark transition-all duration-300">
+    <nav
+        class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-forest-dark transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between relative">
             <span class="text-gold font-bold text-xl tracking-wider">Noriishere</span>
-            
+
             <div class="hidden md:flex items-center gap-8">
                 <a href="#about" class="nav-link text-gold text-sm font-medium opacity-80 hover:opacity-100">Tentang</a>
-                <a href="#skills" class="nav-link text-gold text-sm font-medium opacity-80 hover:opacity-100">Keahlian</a>
-                <a href="#projects" class="nav-link text-gold text-sm font-medium opacity-80 hover:opacity-100">Proyek</a>
-                <a href="#experience" class="nav-link text-gold text-sm font-medium opacity-80 hover:opacity-100">Pengalaman</a>
-                <a href="#contact" class="bg-forest text-gold text-sm font-semibold px-5 py-2 rounded-sm hover:bg-forest-light transition-colors">Kontak</a>
+                <a href="#skills"
+                    class="nav-link text-gold text-sm font-medium opacity-80 hover:opacity-100">Keahlian</a>
+                <a href="#projects"
+                    class="nav-link text-gold text-sm font-medium opacity-80 hover:opacity-100">Proyek</a>
+                <a href="#experience"
+                    class="nav-link text-gold text-sm font-medium opacity-80 hover:opacity-100">Pengalaman</a>
+                <a href="#contact"
+                    class="bg-forest text-gold text-sm font-semibold px-5 py-2 rounded-sm hover:bg-forest-light transition-colors">Kontak</a>
             </div>
-            
+
             <button id="menu-btn" class="md:hidden text-gold text-xl focus:outline-none">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-black/95 backdrop-blur-md border-b border-forest-dark px-6 py-6 shadow-2xl flex-col gap-6 z-40">
+        <div id="mobile-menu"
+            class="hidden absolute top-16 left-0 w-full bg-black/95 backdrop-blur-md border-b border-forest-dark px-6 py-6 shadow-2xl flex-col gap-6 z-40">
             <a href="#about" class="text-gold text-base font-medium">Tentang</a>
             <a href="#skills" class="text-gold text-base font-medium">Keahlian</a>
             <a href="#projects" class="text-gold text-base font-medium">Proyek</a>
@@ -216,35 +227,45 @@
     <section id="hero" class="relative h-screen flex items-center overflow-hidden noise-overlay">
         <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-0"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60 z-0"></div>
-        <div class="absolute right-8 top-1/2 -translate-y-1/2 text-gold/5 text-[200px] font-black leading-none select-none z-0 hidden lg:block">
+        <div
+            class="absolute right-8 top-1/2 -translate-y-1/2 text-gold/5 text-[200px] font-black leading-none select-none z-0 hidden lg:block">
             DATA
         </div>
 
         <div class="relative z-10 max-w-6xl mx-auto px-6 w-full mt-16 md:mt-10">
-            <div style="animation: slideRightSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.2s">
-                <p class="text-forest-light text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4">
+            <div
+                style="animation: slideRightSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.2s">
+                <p
+                    class="text-forest-light text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4">
                     <i class="fa-solid fa-server mr-2"></i>Sistem Terdistribusi
                 </p>
             </div>
-            <div style="animation: fadeUpSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.4s">
+            <div
+                style="animation: fadeUpSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.4s">
                 <h1 class="text-white text-5xl sm:text-6xl md:text-7xl font-black leading-none mb-2">
                     Bagas<span class="text-gold"> N.</span>
                 </h1>
             </div>
-            <div style="animation: fadeUpSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.5s">
+            <div
+                style="animation: fadeUpSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.5s">
                 <h2 class="text-white/60 text-lg sm:text-xl md:text-2xl font-light mb-6">
                     Pengembang Backend
                 </h2>
             </div>
-            <div style="animation: fadeUpSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.6s" class="flex items-center gap-3 mb-10">
+            <div style="animation: fadeUpSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.6s"
+                class="flex items-center gap-3 mb-10">
                 <span class="gold-line"></span>
-                <p class="text-white/50 text-xs sm:text-sm tracking-wide max-w-md">Merancang arsitektur perangkat lunak yang tangguh dan skalabel</p>
+                <p class="text-white/50 text-xs sm:text-sm tracking-wide max-w-md">Merancang arsitektur perangkat lunak
+                    yang tangguh dan skalabel</p>
             </div>
-            <div style="animation: fadeUpSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.7s" class="flex flex-wrap gap-4">
-                <a href="#projects" class="w-full sm:w-auto text-center bg-gold text-black font-bold px-8 py-3 text-sm tracking-wide hover:bg-yellow-400 transition-colors flex items-center justify-center gap-2 rounded-sm shadow-[0_0_15px_rgba(218,165,32,0.3)] hover:shadow-[0_0_25px_rgba(218,165,32,0.5)]">
+            <div style="animation: fadeUpSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; animation-delay: 0.7s"
+                class="flex flex-wrap gap-4">
+                <a href="#projects"
+                    class="w-full sm:w-auto text-center bg-gold text-black font-bold px-8 py-3 text-sm tracking-wide hover:bg-yellow-400 transition-colors flex items-center justify-center gap-2 rounded-sm shadow-[0_0_15px_rgba(218,165,32,0.3)] hover:shadow-[0_0_25px_rgba(218,165,32,0.5)]">
                     <i class="fa-solid fa-code"></i> Lihat Proyek
                 </a>
-                <a href="#contact" class="w-full sm:w-auto text-center border border-forest text-gold font-semibold px-8 py-3 text-sm tracking-wide hover:bg-forest/30 transition-colors flex items-center justify-center gap-2 rounded-sm">
+                <a href="#contact"
+                    class="w-full sm:w-auto text-center border border-forest text-gold font-semibold px-8 py-3 text-sm tracking-wide hover:bg-forest/30 transition-colors flex items-center justify-center gap-2 rounded-sm">
                     <i class="fa-solid fa-terminal"></i> Hubungi Saya
                 </a>
             </div>
@@ -269,46 +290,64 @@
                     </h2>
                     <div class="flex items-center gap-3 mb-8"><span class="gold-line"></span></div>
                     <p class="text-white/50 text-sm leading-relaxed mb-4">
-                        Sebagai pengembang yang berfokus pada logika penyajian data, saya memastikan bahwa aplikasi dapat menangani pemrosesan informasi secara cepat dan aman. Perhatian utama saya terletak pada struktur peladen yang tertata rapi serta optimalisasi interaksi antarsistem.
+                        Sebagai pengembang yang berfokus pada logika penyajian data, saya memastikan bahwa aplikasi
+                        dapat menangani pemrosesan informasi secara cepat dan aman. Perhatian utama saya terletak pada
+                        struktur peladen yang tertata rapi serta optimalisasi interaksi antarsistem.
                     </p>
                     <p class="text-white/50 text-sm leading-relaxed mb-8">
-                        Latar belakang saya dalam ilmu informatika membantu saya memahami betapa pentingnya performa sistem. Saya merancang pemecahan masalah teknis menggunakan struktur kode yang terukur.
+                        Latar belakang saya dalam ilmu informatika membantu saya memahami betapa pentingnya performa
+                        sistem. Saya merancang pemecahan masalah teknis menggunakan struktur kode yang terukur.
                     </p>
                     <div class="flex flex-wrap gap-3">
-                        <span class="bg-forest/40 border border-forest text-gold text-xs px-4 py-2 rounded-sm"><i class="fa-brands fa-laravel mr-1"></i> Laravel</span>
-                        <span class="bg-forest/40 border border-forest text-gold text-xs px-4 py-2 rounded-sm"><i class="fa-brands fa-node-js mr-1"></i> Node.js</span>
-                        <span class="bg-forest/40 border border-forest text-gold text-xs px-4 py-2 rounded-sm"><i class="fa-solid fa-database mr-1"></i> MySQL</span>
-                        <span class="bg-forest/40 border border-forest text-gold text-xs px-4 py-2 rounded-sm"><i class="fa-solid fa-shield-halved mr-1"></i> Security</span>
+                        <span class="bg-forest/40 border border-forest text-gold text-xs px-4 py-2 rounded-sm"><i
+                                class="fa-brands fa-laravel mr-1"></i> Laravel</span>
+                        <span class="bg-forest/40 border border-forest text-gold text-xs px-4 py-2 rounded-sm"><i
+                                class="fa-brands fa-node-js mr-1"></i> Node.js</span>
+                        <span class="bg-forest/40 border border-forest text-gold text-xs px-4 py-2 rounded-sm"><i
+                                class="fa-solid fa-database mr-1"></i> MySQL</span>
+                        <span class="bg-forest/40 border border-forest text-gold text-xs px-4 py-2 rounded-sm"><i
+                                class="fa-solid fa-shield-halved mr-1"></i> Security</span>
                     </div>
                 </div>
                 <div class="animate-on-scroll" style="transition-delay: 0.15s">
                     <div class="relative mt-8 lg:mt-0">
                         <div class="bg-forest/10 border border-forest/30 p-6 sm:p-8 rounded-sm backdrop-blur-sm">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="bg-black/80 border border-forest/20 p-5 rounded-sm hover:border-gold/50 transition-colors">
+                                <div
+                                    class="bg-black/80 border border-forest/20 p-5 rounded-sm hover:border-gold/50 transition-colors">
                                     <i class="fa-solid fa-network-wired text-gold text-2xl mb-3 block"></i>
                                     <p class="text-white font-semibold text-sm mb-1">Pengembangan API</p>
-                                    <p class="text-white/40 text-xs leading-relaxed">Pembuatan arsitektur komunikasi data untuk kebutuhan lintas platform.</p>
+                                    <p class="text-white/40 text-xs leading-relaxed">Pembuatan arsitektur komunikasi
+                                        data untuk kebutuhan lintas platform.</p>
                                 </div>
-                                <div class="bg-black/80 border border-forest/20 p-5 rounded-sm hover:border-gold/50 transition-colors">
+                                <div
+                                    class="bg-black/80 border border-forest/20 p-5 rounded-sm hover:border-gold/50 transition-colors">
                                     <i class="fa-solid fa-database text-gold text-2xl mb-3 block"></i>
                                     <p class="text-white font-semibold text-sm mb-1">Basis Data</p>
-                                    <p class="text-white/40 text-xs leading-relaxed">Perancangan skema relasional yang cepat dan penyimpanan yang aman.</p>
+                                    <p class="text-white/40 text-xs leading-relaxed">Perancangan skema relasional yang
+                                        cepat dan penyimpanan yang aman.</p>
                                 </div>
-                                <div class="bg-black/80 border border-forest/20 p-5 rounded-sm hover:border-gold/50 transition-colors">
+                                <div
+                                    class="bg-black/80 border border-forest/20 p-5 rounded-sm hover:border-gold/50 transition-colors">
                                     <i class="fa-solid fa-shield-halved text-gold text-2xl mb-3 block"></i>
                                     <p class="text-white font-semibold text-sm mb-1">Keamanan Sistem</p>
-                                    <p class="text-white/40 text-xs leading-relaxed">Penerapan otentikasi serta logika enkripsi untuk melindungi integritas data.</p>
+                                    <p class="text-white/40 text-xs leading-relaxed">Penerapan otentikasi serta logika
+                                        enkripsi untuk melindungi integritas data.</p>
                                 </div>
-                                <div class="bg-black/80 border border-forest/20 p-5 rounded-sm hover:border-gold/50 transition-colors">
+                                <div
+                                    class="bg-black/80 border border-forest/20 p-5 rounded-sm hover:border-gold/50 transition-colors">
                                     <i class="fa-solid fa-microchip text-gold text-2xl mb-3 block"></i>
                                     <p class="text-white font-semibold text-sm mb-1">Kinerja Kode</p>
-                                    <p class="text-white/40 text-xs leading-relaxed">Penyusunan alur algoritma yang efisien demi kelancaran aplikasi peladen.</p>
+                                    <p class="text-white/40 text-xs leading-relaxed">Penyusunan alur algoritma yang
+                                        efisien demi kelancaran aplikasi peladen.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-gold hidden sm:block"></div>
-                        <div class="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-gold hidden sm:block"></div>
+                        <div class="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-gold hidden sm:block">
+                        </div>
+                        <div
+                            class="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-gold hidden sm:block">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -322,71 +361,87 @@
                 <p class="text-forest-light text-xs tracking-[0.3em] uppercase font-semibold mb-3">
                     <i class="fa-solid fa-code-compare mr-2"></i>Kompetensi
                 </p>
-                <h2 class="text-white text-3xl md:text-4xl font-black">Teknologi <span class="text-gold">Utama</span></h2>
+                <h2 class="text-white text-3xl md:text-4xl font-black">Teknologi <span class="text-gold">Utama</span>
+                </h2>
             </div>
             <div class="grid md:grid-cols-2 gap-8 md:gap-10 animate-on-scroll" style="transition-delay: 0.1s">
                 <div class="space-y-6">
                     <div class="skill-item">
                         <div class="flex justify-between mb-2">
-                            <span class="text-white text-sm font-medium"><i class="fa-brands fa-laravel text-gold mr-2 w-5 text-center"></i>Laravel</span>
+                            <span class="text-white text-sm font-medium"><i
+                                    class="fa-brands fa-laravel text-gold mr-2 w-5 text-center"></i>Laravel</span>
                             <span class="text-gold text-sm font-bold">90%</span>
                         </div>
                         <div class="h-1.5 bg-white/5 w-full rounded-full overflow-hidden">
-                            <div class="h-full bg-gold skill-bar-fill rounded-full shadow-[0_0_10px_rgba(218,165,32,0.5)]" data-width="90%" style="width:0%"></div>
+                            <div class="h-full bg-gold skill-bar-fill rounded-full shadow-[0_0_10px_rgba(218,165,32,0.5)]"
+                                data-width="90%" style="width:0%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
                         <div class="flex justify-between mb-2">
-                            <span class="text-white text-sm font-medium"><i class="fa-solid fa-database text-gold mr-2 w-5 text-center"></i>MySQL / PostgreSQL</span>
+                            <span class="text-white text-sm font-medium"><i
+                                    class="fa-solid fa-database text-gold mr-2 w-5 text-center"></i>MySQL /
+                                PostgreSQL</span>
                             <span class="text-gold text-sm font-bold">85%</span>
                         </div>
                         <div class="h-1.5 bg-white/5 w-full rounded-full overflow-hidden">
-                            <div class="h-full bg-gold skill-bar-fill rounded-full shadow-[0_0_10px_rgba(218,165,32,0.5)]" data-width="85%" style="width:0%"></div>
+                            <div class="h-full bg-gold skill-bar-fill rounded-full shadow-[0_0_10px_rgba(218,165,32,0.5)]"
+                                data-width="85%" style="width:0%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
                         <div class="flex justify-between mb-2">
-                            <span class="text-white text-sm font-medium"><i class="fa-brands fa-php text-gold mr-2 w-5 text-center"></i>PHP</span>
+                            <span class="text-white text-sm font-medium"><i
+                                    class="fa-brands fa-php text-gold mr-2 w-5 text-center"></i>PHP</span>
                             <span class="text-gold text-sm font-bold">88%</span>
                         </div>
                         <div class="h-1.5 bg-white/5 w-full rounded-full overflow-hidden">
-                            <div class="h-full bg-gold skill-bar-fill rounded-full shadow-[0_0_10px_rgba(218,165,32,0.5)]" data-width="88%" style="width:0%"></div>
+                            <div class="h-full bg-gold skill-bar-fill rounded-full shadow-[0_0_10px_rgba(218,165,32,0.5)]"
+                                data-width="88%" style="width:0%"></div>
                         </div>
                     </div>
                 </div>
                 <div class="space-y-6">
                     <div class="skill-item">
                         <div class="flex justify-between mb-2">
-                            <span class="text-white text-sm font-medium"><i class="fa-brands fa-node-js text-gold mr-2 w-5 text-center"></i>Node.js / Express</span>
+                            <span class="text-white text-sm font-medium"><i
+                                    class="fa-brands fa-node-js text-gold mr-2 w-5 text-center"></i>Node.js /
+                                Express</span>
                             <span class="text-gold text-sm font-bold">75%</span>
                         </div>
                         <div class="h-1.5 bg-white/5 w-full rounded-full overflow-hidden">
-                            <div class="h-full bg-gold skill-bar-fill rounded-full shadow-[0_0_10px_rgba(218,165,32,0.5)]" data-width="75%" style="width:0%"></div>
+                            <div class="h-full bg-gold skill-bar-fill rounded-full shadow-[0_0_10px_rgba(218,165,32,0.5)]"
+                                data-width="75%" style="width:0%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
                         <div class="flex justify-between mb-2">
-                            <span class="text-white text-sm font-medium"><i class="fa-solid fa-cloud text-gold mr-2 w-5 text-center"></i>RESTful API</span>
+                            <span class="text-white text-sm font-medium"><i
+                                    class="fa-solid fa-cloud text-gold mr-2 w-5 text-center"></i>RESTful API</span>
                             <span class="text-gold text-sm font-bold">90%</span>
                         </div>
                         <div class="h-1.5 bg-white/5 w-full rounded-full overflow-hidden">
-                            <div class="h-full bg-gold skill-bar-fill rounded-full shadow-[0_0_10px_rgba(218,165,32,0.5)]" data-width="90%" style="width:0%"></div>
+                            <div class="h-full bg-gold skill-bar-fill rounded-full shadow-[0_0_10px_rgba(218,165,32,0.5)]"
+                                data-width="90%" style="width:0%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
                         <div class="flex justify-between mb-2">
-                            <span class="text-white text-sm font-medium"><i class="fa-brands fa-git-alt text-gold mr-2 w-5 text-center"></i>Git / Pengendalian Versi</span>
+                            <span class="text-white text-sm font-medium"><i
+                                    class="fa-brands fa-git-alt text-gold mr-2 w-5 text-center"></i>Git / Pengendalian
+                                Versi</span>
                             <span class="text-gold text-sm font-bold">85%</span>
                         </div>
                         <div class="h-1.5 bg-white/5 w-full rounded-full overflow-hidden">
-                            <div class="h-full bg-gold skill-bar-fill rounded-full shadow-[0_0_10px_rgba(218,165,32,0.5)]" data-width="85%" style="width:0%"></div>
+                            <div class="h-full bg-gold skill-bar-fill rounded-full shadow-[0_0_10px_rgba(218,165,32,0.5)]"
+                                data-width="85%" style="width:0%"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- PROJECTS -->
     <section class="py-16 md:py-28 bg-black border-t border-forest/20">
         <div class="max-w-6xl mx-auto px-6">
@@ -394,9 +449,10 @@
                 <p class="text-forest-light text-xs tracking-[0.3em] uppercase font-semibold mb-3">
                     <i class="fa-solid fa-folder-open mr-2"></i>Karya
                 </p>
-                <h2 class="text-white text-3xl md:text-4xl font-black">Implementasi <span class="text-gold">Sistem</span></h2>
+                <h2 class="text-white text-3xl md:text-4xl font-black">Implementasi <span
+                        class="text-gold">Sistem</span></h2>
             </div>
-            
+
             <div id="projects" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <!-- Data dirender melalui JavaScript internal -->
             </div>
@@ -410,38 +466,48 @@
                 <p class="text-forest-light text-xs tracking-[0.3em] uppercase font-semibold mb-3">
                     <i class="fa-solid fa-briefcase mr-2"></i>Rekam Jejak
                 </p>
-                <h2 class="text-white text-3xl md:text-4xl font-black">Pengalaman <span class="text-gold">Profesional</span></h2>
+                <h2 class="text-white text-3xl md:text-4xl font-black">Pengalaman <span
+                        class="text-gold">Profesional</span></h2>
             </div>
             <div class="max-w-3xl mx-auto space-y-0">
                 <div class="animate-on-scroll relative pl-8 md:pl-10">
                     <div class="timeline-dot absolute left-0 top-1.5"></div>
                     <div class="timeline-line"></div>
-                    <div class="bg-forest/10 border border-forest/30 p-5 md:p-6 mb-6 rounded-sm hover:border-gold/30 transition-colors">
+                    <div
+                        class="bg-forest/10 border border-forest/30 p-5 md:p-6 mb-6 rounded-sm hover:border-gold/30 transition-colors">
                         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
                             <div>
                                 <h3 class="text-white font-bold text-base md:text-lg">Pengembang Backend Independen</h3>
                                 <p class="text-gold text-xs mt-1">Berbagai Proyek Digital</p>
                             </div>
-                            <span class="text-white/30 text-xs border border-white/10 px-3 py-1 flex items-center gap-1 rounded-sm w-fit">
+                            <span
+                                class="text-white/30 text-xs border border-white/10 px-3 py-1 flex items-center gap-1 rounded-sm w-fit">
                                 <i class="fa-regular fa-calendar text-gold/50"></i> 2024 - Sekarang
                             </span>
                         </div>
-                        <p class="text-white/40 text-xs md:text-sm leading-relaxed">Merancang kerangka dasar aplikasi web & REST API, mengoptimalisasi basis data relasional, dan menerapkan modul keamanan sistem.</p>
+                        <p class="text-white/40 text-xs md:text-sm leading-relaxed">Merancang kerangka dasar aplikasi
+                            web & REST API, mengoptimalisasi basis data relasional, dan menerapkan modul keamanan
+                            sistem.</p>
                     </div>
                 </div>
                 <div class="animate-on-scroll relative pl-8 md:pl-10" style="transition-delay:0.1s">
                     <div class="timeline-dot absolute left-0 top-1.5"></div>
-                    <div class="bg-forest/10 border border-forest/30 p-5 md:p-6 rounded-sm hover:border-gold/30 transition-colors">
+                    <div
+                        class="bg-forest/10 border border-forest/30 p-5 md:p-6 rounded-sm hover:border-gold/30 transition-colors">
                         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
                             <div>
-                                <h3 class="text-white font-bold text-base md:text-lg">Riset & Studi Mahasiswa Informatika</h3>
+                                <h3 class="text-white font-bold text-base md:text-lg">Riset & Studi Mahasiswa
+                                    Informatika</h3>
                                 <p class="text-gold text-xs mt-1">Universitas Buana Perjuangan Karawang</p>
                             </div>
-                            <span class="text-white/30 text-xs border border-white/10 px-3 py-1 flex items-center gap-1 rounded-sm w-fit">
+                            <span
+                                class="text-white/30 text-xs border border-white/10 px-3 py-1 flex items-center gap-1 rounded-sm w-fit">
                                 <i class="fa-regular fa-calendar text-gold/50"></i> 2024 - Sekarang
                             </span>
                         </div>
-                        <p class="text-white/40 text-xs md:text-sm leading-relaxed">Menyelesaikan berbagai tantangan pemrograman berorientasi objek, mendesain skema relasi entitas, serta mengembangkan aplikasi berbasis kerangka kerja modern.</p>
+                        <p class="text-white/40 text-xs md:text-sm leading-relaxed">Menyelesaikan berbagai tantangan
+                            pemrograman berorientasi objek, mendesain skema relasi entitas, serta mengembangkan aplikasi
+                            berbasis kerangka kerja modern.</p>
                     </div>
                 </div>
             </div>
@@ -456,23 +522,32 @@
                     <p class="text-forest-light text-xs tracking-[0.3em] uppercase font-semibold mb-3">
                         <i class="fa-solid fa-paper-plane mr-2"></i>Komunikasi
                     </p>
-                    <h2 class="text-white text-3xl md:text-4xl font-black mb-6">Mari <span class="text-gold">Berdiskusi.</span></h2>
+                    <h2 class="text-white text-3xl md:text-4xl font-black mb-6">Mari <span
+                            class="text-gold">Berdiskusi.</span></h2>
                     <div class="flex items-center gap-3 mb-8"><span class="gold-line"></span></div>
-                    <p class="text-white/50 text-sm leading-relaxed mb-10">Saya siap membantu merancang solusi di sisi peladen untuk aplikasi Anda atau sekadar bertukar pikiran mengenai perkembangan teknologi web saat ini.</p>
+                    <p class="text-white/50 text-sm leading-relaxed mb-10">Saya siap membantu merancang solusi di sisi
+                        peladen untuk aplikasi Anda atau sekadar bertukar pikiran mengenai perkembangan teknologi web
+                        saat ini.</p>
                     <div class="space-y-5">
-                        <a href="mailto:if24.bagasnurdiansyah@mhs.ubpkarawang.ac.id" class="flex items-center gap-4 group">
-                            <div class="w-12 h-12 md:w-10 md:h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 rounded-sm group-hover:bg-forest transition-colors">
-                                <i class="fa-solid fa-envelope text-gold text-sm group-hover:scale-110 transition-transform"></i>
+                        <a href="mailto:bagasb65nurdiansyah777@gmail.com" class="flex items-center gap-4 group">
+                            <div
+                                class="w-12 h-12 md:w-10 md:h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 rounded-sm group-hover:bg-forest transition-colors">
+                                <i
+                                    class="fa-solid fa-envelope text-gold text-sm group-hover:scale-110 transition-transform"></i>
                             </div>
                             <div class="overflow-hidden">
                                 <p class="text-white/30 text-xs mb-0.5">Surat Elektronik</p>
-                                <p class="text-white text-xs md:text-sm group-hover:text-gold transition-colors truncate">
-                                    if24.bagasnurdiansyah@mhs.ubpkarawang.ac.id</p>
+                                <p
+                                    class="text-white text-xs md:text-sm group-hover:text-gold transition-colors truncate">
+                                    bagasb65nurdiansyah777@gmail.com</p>
                             </div>
                         </a>
-                        <a href="https://www.linkedin.com/in/bagas-nurdiansyah-026016289" target="_blank" class="flex items-center gap-4 group">
-                            <div class="w-12 h-12 md:w-10 md:h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 rounded-sm group-hover:bg-forest transition-colors">
-                                <i class="fa-brands fa-linkedin-in text-gold text-sm group-hover:scale-110 transition-transform"></i>
+                        <a href="https://www.linkedin.com/in/bagas-nurdiansyah-026016289" target="_blank"
+                            class="flex items-center gap-4 group">
+                            <div
+                                class="w-12 h-12 md:w-10 md:h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 rounded-sm group-hover:bg-forest transition-colors">
+                                <i
+                                    class="fa-brands fa-linkedin-in text-gold text-sm group-hover:scale-110 transition-transform"></i>
                             </div>
                             <div>
                                 <p class="text-white/30 text-xs mb-0.5">Jejaring Profesional</p>
@@ -481,8 +556,10 @@
                             </div>
                         </a>
                         <a href="https://github.com/noriishere" target="_blank" class="flex items-center gap-4 group">
-                            <div class="w-12 h-12 md:w-10 md:h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 rounded-sm group-hover:bg-forest transition-colors">
-                                <i class="fa-brands fa-github text-gold text-sm group-hover:scale-110 transition-transform"></i>
+                            <div
+                                class="w-12 h-12 md:w-10 md:h-10 bg-forest/40 border border-forest flex items-center justify-center flex-shrink-0 rounded-sm group-hover:bg-forest transition-colors">
+                                <i
+                                    class="fa-brands fa-github text-gold text-sm group-hover:scale-110 transition-transform"></i>
                             </div>
                             <div>
                                 <p class="text-white/30 text-xs mb-0.5">Repositori Kode</p>
@@ -494,22 +571,32 @@
                 </div>
                 <div class="animate-on-scroll" style="transition-delay:0.15s">
                     <div class="bg-black border border-forest/30 p-6 md:p-8 relative rounded-sm">
-                        <div class="absolute -top-2 -left-2 w-5 h-5 border-t-2 border-l-2 border-gold hidden sm:block"></div>
-                        <div class="absolute -bottom-2 -right-2 w-5 h-5 border-b-2 border-r-2 border-gold hidden sm:block"></div>
+                        <div class="absolute -top-2 -left-2 w-5 h-5 border-t-2 border-l-2 border-gold hidden sm:block">
+                        </div>
+                        <div
+                            class="absolute -bottom-2 -right-2 w-5 h-5 border-b-2 border-r-2 border-gold hidden sm:block">
+                        </div>
                         <form id="contact-form" class="space-y-5">
                             <div>
-                                <label for="contact-name" class="text-white/40 text-xs tracking-wider uppercase block mb-2">Nama Lengkap</label>
+                                <label for="contact-name"
+                                    class="text-white/40 text-xs tracking-wider uppercase block mb-2">Nama
+                                    Lengkap</label>
                                 <input type="text" id="contact-name" required placeholder="Ketik nama Anda di sini"
                                     class="w-full bg-white/5 border border-forest/30 rounded-sm text-white text-sm px-4 py-3 outline-none focus:border-gold focus:bg-white/10 transition-all placeholder-white/20">
                             </div>
                             <div>
-                                <label for="contact-email" class="text-white/40 text-xs tracking-wider uppercase block mb-2">Alamat Email</label>
+                                <label for="contact-email"
+                                    class="text-white/40 text-xs tracking-wider uppercase block mb-2">Alamat
+                                    Email</label>
                                 <input type="email" id="contact-email" placeholder="nama@perusahaan.com"
                                     class="w-full bg-white/5 border border-forest/30 rounded-sm text-white text-sm px-4 py-3 outline-none focus:border-gold focus:bg-white/10 transition-all placeholder-white/20">
                             </div>
                             <div>
-                                <label for="contact-message" class="text-white/40 text-xs tracking-wider uppercase block mb-2">Tujuan Pesan</label>
-                                <textarea id="contact-message" rows="4" required placeholder="Jelaskan kebutuhan teknis sistem Anda"
+                                <label for="contact-message"
+                                    class="text-white/40 text-xs tracking-wider uppercase block mb-2">Tujuan
+                                    Pesan</label>
+                                <textarea id="contact-message" rows="4" required
+                                    placeholder="Jelaskan kebutuhan teknis sistem Anda"
                                     class="w-full bg-white/5 border border-forest/30 rounded-sm text-white text-sm px-4 py-3 outline-none focus:border-gold focus:bg-white/10 transition-all placeholder-white/20 resize-none"></textarea>
                             </div>
                             <button type="submit"
@@ -529,9 +616,15 @@
             <span class="text-gold font-bold tracking-wider">Noriishere</span>
             <p class="text-white/20 text-xs text-center md:text-left">Dikodekan dengan keakuratan logika © 2026</p>
             <div class="flex gap-6 md:gap-4">
-                <a href="https://github.com/noriishere" class="text-white/30 hover:text-gold transition-colors text-base md:text-sm"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/bagas-nurdiansyah-026016289" class="text-white/30 hover:text-gold transition-colors text-base md:text-sm"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://instagram.com/bagasnrdiansy" class="text-white/30 hover:text-gold transition-colors text-base md:text-sm"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/noriishere"
+                    class="text-white/30 hover:text-gold transition-colors text-base md:text-sm"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/bagas-nurdiansyah-026016289"
+                    class="text-white/30 hover:text-gold transition-colors text-base md:text-sm"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/bagasnrdiansy"
+                    class="text-white/30 hover:text-gold transition-colors text-base md:text-sm"><i
+                        class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </footer>
@@ -580,16 +673,16 @@
             threshold: 0.1,
             rootMargin: "0px 0px -20px 0px"
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(el => { 
+            entries.forEach(el => {
                 if (el.isIntersecting) {
                     el.target.classList.add('visible');
                     observer.unobserve(el.target);
                 }
             });
         }, observerOptions);
-        
+
         document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
         const skillObserver = new IntersectionObserver((entries) => {
@@ -648,7 +741,7 @@
                 const email = document.getElementById('contact-email').value.trim();
                 const message = document.getElementById('contact-message').value.trim();
 
-                const recipient = 'if24.bagasnurdiansyah@mhs.ubpkarawang.ac.id';
+                const recipient = 'bagasb65nurdiansyah777@gmail.com';
                 const subject = `Pesan Portofolio dari ${name}`;
                 const body = `Halo Bagas,\n\nNama: ${name}\nEmail: ${email || '-'}\n\nPesan:\n${message}`;
 
