@@ -30,7 +30,7 @@ const projects = [
     tech: ["PHP", "Tailwind CSS", "JavaScript", "HTML"],
     delay: "0.2s",
     repoUrl: "https://github.com/Noriishere/bagasblognor",
-    liveUrl: "https://bagasblognor.vercel.app"
+    liveUrl: "https://bagasblognor-hxr9.vercel.app/"
   },
   {
     title: "My Intelligent Learning Environment (MINE)",
