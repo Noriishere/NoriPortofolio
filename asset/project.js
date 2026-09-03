@@ -44,15 +44,15 @@ const projects = [
     liveUrl: ""
   },
   {
-    title: "Web Tracking Progress Belajar",
-    desc: "Sistem pelacakan dan evaluasi perkembangan belajar berbasis web untuk pencatatan akademik dan pemantauan berkala.",
-    icon: "fa-chart-line",
-    label: "Pelacak",
-    labelStyle: "text-purple-400",
-    tech: ["PHP", "MySQL", "CSS", "JavaScript"],
+    title: "Website Profile UKM Malaka",
+    desc: "Website company profile resmi untuk UKM Malaka UBP Karawang yang menyajikan informasi organisasi, kegiatan, dan profil anggota secara modern.",
+    icon: "fa-users",
+    label: "Company Profile",
+    labelStyle: "text-emerald-400",
+    tech: ["PHP", "Tailwind CSS", "JavaScript"],
     delay: "0.4s",
-    repoUrl: "https://github.com/Noriishere/web-tracking-progress-belajar",
-    liveUrl: ""
+    repoUrl: "",
+    liveUrl: "https://malakaubpkarawang.com"
   },
   {
     title: "Gym Bot Telegram",
