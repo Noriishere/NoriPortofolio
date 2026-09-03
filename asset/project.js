@@ -64,5 +64,16 @@ const projects = [
     delay: "0.5s",
     repoUrl: "https://github.com/Noriishere/Gym-botTele",
     liveUrl: ""
+  },
+  {
+    title: "Crypto Augmented Reality",
+    desc: "Platform WebVR/AR interaktif berbasis 3D (A-Frame & React) untuk simulasi dan visualisasi enkripsi data kriptografi dalam ruang virtual.",
+    icon: "fa-vr-cardboard",
+    label: "WebVR / AR",
+    labelStyle: "text-cyan-400",
+    tech: ["React", "Vite", "A-Frame", "Three.js", "JavaScript"],
+    delay: "0.6s",
+    repoUrl: "https://github.com/Noriishere/augmented-reality-encrypt",
+    liveUrl: ""
   }
 ];
