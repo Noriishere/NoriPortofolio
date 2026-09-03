@@ -75,5 +75,49 @@ const projects = [
     delay: "0.6s",
     repoUrl: "https://github.com/Noriishere/augmented-reality-encrypt",
     liveUrl: ""
+  },
+  {
+    title: "Turn-Based RPG Game",
+    desc: "Game RPG turn-based interaktif berbasis mobile dan web yang dibangun menggunakan Ionic Framework dan Angular 20.",
+    icon: "fa-gamepad",
+    label: "Game Dev",
+    labelStyle: "text-amber-400",
+    tech: ["Angular", "Ionic", "TypeScript", "HTML/CSS"],
+    delay: "0.7s",
+    repoUrl: "https://github.com/Noriishere/turn-based-rpg-antusias",
+    liveUrl: ""
+  },
+  {
+    title: "KNN Machine Learning Classifier",
+    desc: "Implementasi dan eksperimen algoritma Machine Learning K-Nearest Neighbors (KNN) untuk klasifikasi pola data dan analitis.",
+    icon: "fa-brain",
+    label: "Machine Learning",
+    labelStyle: "text-purple-400",
+    tech: ["Python", "Jupyter Notebook", "Scikit-Learn", "Pandas"],
+    delay: "0.8s",
+    repoUrl: "https://github.com/Noriishere/knn-iris",
+    liveUrl: ""
+  },
+  {
+    title: "Artificial Intelligence Labs",
+    desc: "Koleksi modul eksperimen implementasi berbagai algoritma Kecerdasan Buatan (AI) serta pencatatan logika optimasi berbasis Python.",
+    icon: "fa-atom",
+    label: "AI Lab",
+    labelStyle: "text-indigo-400",
+    tech: ["Python", "AI Algorithms"],
+    delay: "0.9s",
+    repoUrl: "https://github.com/Noriishere/kecerdasan-tiruan",
+    liveUrl: ""
+  },
+  {
+    title: "Security Vulnerability Tester",
+    desc: "Tool otomatisasi pengujian keamanan jaringan berbasis Python untuk evaluasi dan audit kerentanan protokol WebDAV.",
+    icon: "fa-user-ninja",
+    label: "Cybersecurity",
+    labelStyle: "text-red-400",
+    tech: ["Python", "Web Security", "Networking"],
+    delay: "1.0s",
+    repoUrl: "https://github.com/Noriishere/white-deface",
+    liveUrl: ""
   }
 ];
