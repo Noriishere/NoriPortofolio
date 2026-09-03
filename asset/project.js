@@ -77,14 +77,14 @@ const projects = [
     liveUrl: ""
   },
   {
-    title: "Turn-Based RPG Game",
-    desc: "Game RPG turn-based interaktif berbasis mobile dan web yang dibangun menggunakan Ionic Framework dan Angular 20.",
+    title: "Russian Roulette 2045",
+    desc: "Game strategi turn-based bertema cyberpunk sci-fi 2045 berbasis Python/CLI dengan mekanik manajemen risiko dan permainan taktikal.",
     icon: "fa-gamepad",
     label: "Game Dev",
     labelStyle: "text-amber-400",
-    tech: ["Angular", "Ionic", "TypeScript", "HTML/CSS"],
+    tech: ["Python", "Game Logic", "CLI", "Pytest"],
     delay: "0.7s",
-    repoUrl: "https://github.com/Noriishere/turn-based-rpg-antusias",
+    repoUrl: "https://github.com/Noriishere/russian-roullete2045",
     liveUrl: ""
   },
   {
